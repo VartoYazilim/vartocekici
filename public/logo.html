@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Logo Alternatives — Varto Çekici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand: #F59E0B;
+      --brand-light: #FBBF24;
+      --brand-dark: #B45309;
+      --ink: #0B1220;
+      --ink-2: #0F172A;
+      --ink-3: #1E293B;
+      --ink-4: #334155;
+      --text: #F8FAFC;
+      --text-2: #CBD5E1;
+      --text-3: #94A3B8;
+      --warning: #FACC15;
+      --emergency: #DC2626;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--ink);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 48px 24px; }
+    h1 { font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 900; margin: 0 0 8px; letter-spacing: -0.5px; }
+    .lede { color: var(--text-3); max-width: 720px; margin: 0 0 8px; font-size: 16px; }
+    .lede strong { color: var(--brand-light); font-weight: 700; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 36px; }
+    @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+    .card {
+      background: linear-gradient(180deg, rgba(30,41,59,0.6), rgba(15,23,42,0.8));
+      border: 1px solid rgba(51,65,85,0.6);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .card header {
+      padding: 18px 22px;
+      border-bottom: 1px solid rgba(51,65,85,0.6);
+      display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    }
+    .card header .num {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 900; font-size: 12px; letter-spacing: 2px;
+      color: var(--brand);
+    }
+    .card header h2 {
+      margin: 0; font-family: 'Inter Tight', sans-serif;
+      font-size: 18px; font-weight: 800; letter-spacing: -0.2px;
+    }
+    .card .note { color: var(--text-3); font-size: 13px; padding: 0 22px 14px; line-height: 1.5; }
+    .card .stage-dark, .card .stage-light {
+      padding: 36px 22px;
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+      min-height: 220px; justify-content: center;
+    }
+    .card .stage-dark { background: var(--ink); }
+    .card .stage-light { background: #F1F5F9; }
+
+    .lockup { display: inline-flex; align-items: center; gap: 14px; }
+    .wordmark { display: flex; flex-direction: column; line-height: 0.92; }
+    .wordmark .l1 { font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: 0.5px; }
+    .wordmark .l2 { font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: 0.5px; }
+    .dark .wordmark .l1 { color: var(--text); }
+    .dark .wordmark .l2 { color: var(--brand); }
+    .light .wordmark .l1 { color: var(--ink); }
+    .light .wordmark .l2 { color: var(--brand-dark); }
+
+    .swatch-row {
+      display: flex; gap: 10px; padding: 12px 22px 20px; flex-wrap: wrap;
+      border-top: 1px dashed rgba(51,65,85,0.6);
+    }
+    .swatch {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; color: var(--text-3); font-family: 'Inter Tight';
+      font-weight: 700; letter-spacing: 0.5px;
+    }
+    .swatch i {
+      display: inline-block; width: 14px; height: 14px; border-radius: 3px;
+      border: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .header-bar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,18,32,0.85); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(51,65,85,0.6);
+      padding: 16px 24px;
+      display: flex; gap: 14px; align-items: center; justify-content: space-between;
+    }
+    .header-bar a {
+      color: var(--brand-light); text-decoration: none; font-size: 13px; font-weight: 700;
+    }
+    .badge-pill {
+      display: inline-flex; gap: 6px; align-items: center;
+      background: rgba(245,158,11,0.1); color: var(--brand-light);
+      padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      border: 1px solid rgba(245,158,11,0.3);
+    }
+    .footer-note {
+      text-align: center; margin: 64px 0 24px; color: var(--text-3); font-size: 13px;
+    }
+    .footer-note strong { color: var(--text-2); }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <span class="badge-pill">Logo Alternatives</span>
+    <a href="/">← Ana sayfa</a>
+  </div>
+
+  <div class="container">
+    <h1>Logo Alternatifleri</h1>
+    <p class="lede">
+      6 farklı yön. Her biri <strong>aynı çekirdek marka rengini</strong> kullanır (amber + slate)
+      ama farklı bir karakteri temsil eder. Hangi yön daha "yol yardımı" hissi veriyor sence?
+      Hem koyu hem açık zeminde gösteriyorum, çünkü gerçek dünyada (logo araç üstünde, broşür, GBP profil,
+      Instagram) her ikisinde de iyi durması gerek.
+    </p>
+
+    <div class="grid">
+
+      <!-- 01: CURRENT — Octagon + V chevron + hook -->
+      <div class="card">
+        <header>
+          <div>
+            <span class="num">01 · MEVCUT</span>
+            <h2 style="margin-top:4px">Sekizgen + V + Çengel</h2>
+          </div>
+          <span class="badge-pill" style="background:rgba(148,163,184,0.1);color:var(--text-3);border-color:rgba(148,163,184,0.2);">Üretimde</span>
+        </header>
+        <p class="note">
+          Yol işaretine benzer stop-sekizgeni içinde V harfi (Varto) ve altında bir çekici çengeli kıvrımı.
+          <strong style="color:var(--text-2)">Güçlü yönü:</strong> Tipografi sade, fark yaratan bir mark.
+          <strong style="color:var(--text-2)">Zayıf yönü:</strong> Çengel detayı küçük boyutta kayboluyor; "yol yardımı" hissi belirsiz.
+        </p>
+        <div class="stage-dark dark">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <defs><linearGradient id="l1d" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient></defs>
+              <path d="M20 4 L44 4 L60 20 L60 44 L44 60 L20 60 L4 44 L4 20 Z" fill="url(#l1d)" stroke="#0B1220" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M16 20 L32 42 L48 20" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 42 Q32 50 38 50 Q44 50 44 46" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="stage-light light">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <path d="M20 4 L44 4 L60 20 L60 44 L44 60 L20 60 L4 44 L4 20 Z" fill="#F59E0B" stroke="#0B1220" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M16 20 L32 42 L48 20" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 42 Q32 50 38 50 Q44 50 44 46" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#F59E0B"></i>Brand 500</span>
+          <span class="swatch"><i style="background:#0B1220"></i>Ink 950</span>
+        </div>
+      </div>
+
+      <!-- 02: WARNING TRIANGLE -->
+      <div class="card">
+        <header>
+          <div>
+            <span class="num">02 · ACİL / UYARI</span>
+            <h2 style="margin-top:4px">Üçgen Uyarı + V</h2>
+          </div>
+          <span class="badge-pill">Yol Yardımı Hissi ★★★★★</span>
+        </header>
+        <p class="note">
+          Klasik üçgen yol uyarı işareti. İçinde Varto'nun V'si. Her sürücünün gözüne aşina,
+          <strong style="color:var(--text-2)">"acil yardım" çağrışımı çok güçlü</strong>.
+          Çekici sektöründe sık görülmeyen ama mantıklı bir yön.
+        </p>
+        <div class="stage-dark dark">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <path d="M32 6 L60 56 L4 56 Z" fill="#FACC15" stroke="#0B1220" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M22 26 L32 46 L42 26" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="51" r="2.5" fill="#0B1220"/>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2" style="color:#FACC15">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="stage-light light">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <path d="M32 6 L60 56 L4 56 Z" fill="#FACC15" stroke="#0B1220" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M22 26 L32 46 L42 26" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="51" r="2.5" fill="#0B1220"/>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2" style="color:#CA8A04">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#FACC15"></i>Warning 400</span>
+          <span class="swatch"><i style="background:#0B1220"></i>Ink 950</span>
+        </div>
+      </div>
+
+      <!-- 03: TOW HOOK MONOGRAM -->
+      <div class="card">
+        <header>
+          <div>
+            <span class="num">03 · ÇEKİCİ ÇENGEL</span>
+            <h2 style="margin-top:4px">Çengel Monogram</h2>
+          </div>
+          <span class="badge-pill">Yol Yardımı Hissi ★★★★★</span>
+        </header>
+        <p class="note">
+          Tasarımın kendisi <strong style="color:var(--text-2)">tow hook (çekici çengeli)</strong>.
+          V harfi bir çengele dönüşür. Sade, ikonik, küçük boyutta bile okunur.
+          Çekici sektörünün net görsel kodu.
+        </p>
+        <div class="stage-dark dark">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <rect x="4" y="4" width="56" height="56" rx="14" fill="#F59E0B"/>
+              <g fill="none" stroke="#0B1220" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 16 L32 44"/>
+                <path d="M50 16 L36 36"/>
+                <path d="M32 44 Q32 54 40 54 Q48 54 48 46" />
+              </g>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="stage-light light">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <rect x="4" y="4" width="56" height="56" rx="14" fill="#0B1220"/>
+              <g fill="none" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 16 L32 44"/>
+                <path d="M50 16 L36 36"/>
+                <path d="M32 44 Q32 54 40 54 Q48 54 48 46" />
+              </g>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#F59E0B"></i>Brand 500</span>
+          <span class="swatch"><i style="background:#0B1220"></i>Ink 950</span>
+        </div>
+      </div>
+
+      <!-- 04: RECOVERY CHEVRONS -->
+      <div class="card">
+        <header>
+          <div>
+            <span class="num">04 · KURTARMA ŞERİTLERİ</span>
+            <h2 style="margin-top:4px">Chevron Stack</h2>
+          </div>
+          <span class="badge-pill">Yol Yardımı Hissi ★★★★☆</span>
+        </header>
+        <p class="note">
+          Kurtarma araçlarının arkasında bulunan <strong style="color:var(--text-2)">üç açılı şerit</strong> deseni.
+          Çok güçlü "emergency response" çağrışımı. Yüksek görünürlük. Distinctif ama daha az ikonik.
+        </p>
+        <div class="stage-dark dark">
+          <div class="lockup">
+            <svg width="72" height="64" viewBox="0 0 72 64">
+              <g>
+                <path d="M0 4 L24 4 L36 32 L24 60 L0 60 L12 32 Z" fill="#F59E0B"/>
+                <path d="M24 4 L48 4 L60 32 L48 60 L24 60 L36 32 Z" fill="#FBBF24"/>
+                <path d="M48 4 L72 4 L60 32 L72 60 L48 60 L60 32 Z" fill="#FCD34D"/>
+              </g>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="stage-light light">
+          <div class="lockup">
+            <svg width="72" height="64" viewBox="0 0 72 64">
+              <g>
+                <path d="M0 4 L24 4 L36 32 L24 60 L0 60 L12 32 Z" fill="#0B1220"/>
+                <path d="M24 4 L48 4 L60 32 L48 60 L24 60 L36 32 Z" fill="#F59E0B"/>
+                <path d="M48 4 L72 4 L60 32 L72 60 L48 60 L60 32 Z" fill="#0B1220"/>
+              </g>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#F59E0B"></i>Brand 500</span>
+          <span class="swatch"><i style="background:#FBBF24"></i>Brand 400</span>
+          <span class="swatch"><i style="background:#FCD34D"></i>Brand 300</span>
+        </div>
+      </div>
+
+      <!-- 05: TOW TRUCK SILHOUETTE -->
+      <div class="card">
+        <header>
+          <div>
+            <span class="num">05 · ÇEKİCİ SİLÜETİ</span>
+            <h2 style="margin-top:4px">Yuvarlak Rozet + Araç</h2>
+          </div>
+          <span class="badge-pill">Yol Yardımı Hissi ★★★★★</span>
+        </header>
+        <p class="note">
+          Yan profilden bir çekici silüeti dairesel rozete oturmuş.
+          <strong style="color:var(--text-2)">"Bu ne yapan firma?" sorusunun direkt cevabı</strong>.
+          En sıcak ve davetkar yön. Logo nakışlı tişört/bere için bile uygun.
+        </p>
+        <div class="stage-dark dark">
+          <div class="lockup">
+            <svg width="68" height="64" viewBox="0 0 68 64">
+              <circle cx="34" cy="32" r="30" fill="#F59E0B" stroke="#0B1220" stroke-width="2"/>
+              <!-- truck body -->
+              <g fill="#0B1220">
+                <!-- cab -->
+                <path d="M14 38 L14 26 L24 26 L28 22 L34 22 L34 38 Z"/>
+                <!-- flatbed -->
+                <path d="M34 38 L34 28 L54 28 L54 38 Z"/>
+                <!-- tow boom -->
+                <path d="M51 32 L60 24 L56 22 L50 28 Z"/>
+              </g>
+              <!-- wheels -->
+              <circle cx="22" cy="42" r="5" fill="#0B1220"/>
+              <circle cx="22" cy="42" r="2" fill="#F59E0B"/>
+              <circle cx="44" cy="42" r="5" fill="#0B1220"/>
+              <circle cx="44" cy="42" r="2" fill="#F59E0B"/>
+              <!-- window highlight -->
+              <path d="M18 28 L24 28 L26 24 L18 24 Z" fill="#FBBF24" opacity="0.6"/>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="stage-light light">
+          <div class="lockup">
+            <svg width="68" height="64" viewBox="0 0 68 64">
+              <circle cx="34" cy="32" r="30" fill="#0B1220" stroke="#F59E0B" stroke-width="3"/>
+              <g fill="#F59E0B">
+                <path d="M14 38 L14 26 L24 26 L28 22 L34 22 L34 38 Z"/>
+                <path d="M34 38 L34 28 L54 28 L54 38 Z"/>
+                <path d="M51 32 L60 24 L56 22 L50 28 Z"/>
+              </g>
+              <circle cx="22" cy="42" r="5" fill="#F59E0B"/>
+              <circle cx="22" cy="42" r="2" fill="#0B1220"/>
+              <circle cx="44" cy="42" r="5" fill="#F59E0B"/>
+              <circle cx="44" cy="42" r="2" fill="#0B1220"/>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#F59E0B"></i>Brand 500</span>
+          <span class="swatch"><i style="background:#0B1220"></i>Ink 950</span>
+        </div>
+      </div>
+
+      <!-- 06: HEAVY-DUTY WRENCH + HOOK -->
+      <div class="card">
+        <header>
+          <div>
+            <span class="num">06 · AĞIR HİZMET</span>
+            <h2 style="margin-top:4px">Çapraz Anahtar + Çengel</h2>
+          </div>
+          <span class="badge-pill">Yol Yardımı Hissi ★★★★☆</span>
+        </header>
+        <p class="note">
+          Klasik endüstriyel arma: çapraz İngiliz anahtarı + çengel. "Bir şeyleri çekip kurtarırız" sözünü
+          <strong style="color:var(--text-2)">en doğrudan ifade</strong>.
+          Ağır vasıta hissi güçlü, premium duruyor.
+        </p>
+        <div class="stage-dark dark">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <path d="M32 4 L58 18 L58 44 L32 60 L6 44 L6 18 Z" fill="#F59E0B" stroke="#0B1220" stroke-width="2" stroke-linejoin="round"/>
+              <!-- wrench (diagonal) -->
+              <g transform="rotate(45 32 32)" fill="#0B1220" stroke="#0B1220" stroke-width="2" stroke-linejoin="round">
+                <rect x="29" y="14" width="6" height="28" rx="1"/>
+                <path d="M27 14 L37 14 L37 8 L33 8 L33 11 L31 11 L31 8 L27 8 Z"/>
+                <path d="M27 42 L37 42 L37 48 L33 48 L33 45 L31 45 L31 48 L27 48 Z"/>
+              </g>
+              <!-- hook (other diagonal) -->
+              <g transform="rotate(-45 32 32)" fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 12 L32 38"/>
+                <path d="M32 38 Q32 48 40 48 Q48 48 48 42"/>
+              </g>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="stage-light light">
+          <div class="lockup">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <path d="M32 4 L58 18 L58 44 L32 60 L6 44 L6 18 Z" fill="#0B1220"/>
+              <g transform="rotate(45 32 32)" fill="#F59E0B">
+                <rect x="29" y="14" width="6" height="28" rx="1"/>
+                <path d="M27 14 L37 14 L37 8 L33 8 L33 11 L31 11 L31 8 L27 8 Z"/>
+                <path d="M27 42 L37 42 L37 48 L33 48 L33 45 L31 45 L31 48 L27 48 Z"/>
+              </g>
+              <g transform="rotate(-45 32 32)" fill="none" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 12 L32 38"/>
+                <path d="M32 38 Q32 48 40 48 Q48 48 48 42"/>
+              </g>
+            </svg>
+            <div class="wordmark"><span class="l1">VARTO</span><span class="l2">ÇEKİCİ</span></div>
+          </div>
+        </div>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#F59E0B"></i>Brand 500</span>
+          <span class="swatch"><i style="background:#0B1220"></i>Ink 950</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer-note">
+      <strong>Hangisi sence?</strong> Bana <em>"03 + 05'i karıştır, V harfli truck olsun"</em> tarzında diyebilirsin —
+      ya da bir tanesini doğrudan seç, sitede onunla devam ederim. Renk değişikliği de mümkün
+      (her tasarımı kırmızı/siyah veya turuncu/lacivert versiyonuyla da gösterebilirim).
+    </p>
+  </div>
+</body>
+</html>

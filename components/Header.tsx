@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { business, telHref } from "@/lib/business";
 
-const sections = ["services", "area", "about", "contact"] as const;
+const sections = ["services", "gallery", "area", "about", "contact"] as const;
 
 export function Header({ locale }: { locale: "tr" | "en" }) {
   const t = useTranslations("nav");
@@ -34,6 +34,7 @@ export function Header({ locale }: { locale: "tr" | "en" }) {
 
   const sectionIds: Record<(typeof sections)[number], string> = {
     services: "hizmetler",
+    gallery: "galeri",
     area: "bolge",
     about: "hakkimizda",
     contact: "iletisim",

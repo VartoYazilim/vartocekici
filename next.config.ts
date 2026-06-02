@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
   compress: true,
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      // Placeholder source — real photos will live under /public/galeri/ and
+      // this entry can be removed once all images are local.
+      { protocol: "https", hostname: "picsum.photos" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+    ],
   },
   async headers() {
     return [

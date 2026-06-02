@@ -6,107 +6,122 @@
   },
   "nav": {
     "services": "Services",
-    "area": "Service Area",
+    "gallery": "Gallery",
+    "area": "Coverage",
     "about": "About",
     "contact": "Contact",
     "callNow": "Call Now"
   },
   "hero": {
     "badge": "Open 24/7 · Fast Response",
-    "title": "Stranded on the Road? One Call Away.",
-    "subtitle": "24/7 towing and auto recovery across Varto, Hınıs, Muş and the surrounding region. City, intercity, off-road — wherever you are, we'll come.",
+    "title": "Stranded? Call Now.",
+    "subtitle": "24/7 towing across Varto, Hınıs, Muş and surroundings. City, intercity, off-road — wherever you are.",
     "callCta": "Call Now",
-    "whatsappCta": "Message on WhatsApp",
+    "whatsappCta": "WhatsApp",
     "stats": {
-      "availability": "Always Open",
-      "response": "Fast Response",
-      "coverage": "Wide Coverage Area"
+      "availability": "Open",
+      "response": "Fast",
+      "coverage": "Wide Coverage"
     }
   },
   "services": {
     "kicker": "Services",
-    "title": "Ready for Anything You'll Face on the Road",
-    "subtitle": "One phone call, day or night, snow or shine — we are on our way.",
+    "title": "What We Do",
+    "subtitle": "One call. We handle the rest.",
     "items": {
       "tow": {
         "title": "City & Intercity Towing",
-        "description": "We tow your broken-down or accident vehicle safely and quickly to any destination you choose."
+        "description": "We tow broken or damaged vehicles to your chosen destination."
       },
       "offroad": {
-        "title": "Off-Road & Field Recovery",
-        "description": "Stuck in snow, mud, a steep slope, or off the road? Our specialized equipment gets your vehicle out."
+        "title": "Off-Road Recovery",
+        "description": "Snow, mud, off-road — we get you out with the right gear."
       },
       "battery": {
         "title": "Battery Boost",
-        "description": "Dead battery? We jumpstart your vehicle on the spot so you can get back on the road."
+        "description": "Dead battery? We jumpstart on the spot."
       },
       "tire": {
         "title": "Tire Change & Repair",
-        "description": "Flat or low tire — we come to your location and get you rolling again."
+        "description": "Flat or low tire — we come to you."
       },
       "fuel": {
         "title": "Fuel Delivery",
-        "description": "Out of fuel? We bring you fuel from the nearest station."
+        "description": "Out of fuel? We bring it from the nearest station."
       },
       "lockout": {
         "title": "Lockout & Key Service",
-        "description": "Lost your key or locked it inside the car? We provide professional assistance."
+        "description": "Lost your key or locked it inside? We help."
       },
       "accident": {
         "title": "Post-Accident Towing",
-        "description": "After an accident, we transport your vehicle to a service center or any location you choose."
+        "description": "We move accident vehicles to a service center or wherever you need."
       },
       "heavy": {
         "title": "Every Vehicle Type",
-        "description": "Sedan, SUV, pickup, light commercial — towing service for all vehicle types."
+        "description": "Sedan, SUV, pickup, light commercial — we tow them all."
       }
     }
   },
+  "gallery": {
+    "kicker": "Gallery",
+    "title": "From the Field",
+    "subtitle": "Snapshots from real jobs.",
+    "note": "Placeholder images — to be replaced with real photos soon.",
+    "items": [
+      "City Towing",
+      "Off-Road Recovery",
+      "Late-Night Call",
+      "Snow Recovery",
+      "Roadside Battery Boost",
+      "Intercity Towing"
+    ]
+  },
   "area": {
-    "kicker": "Service Area",
-    "title": "Based in Varto, Covering the Whole Region",
-    "subtitle": "Our primary service area is Varto, but we reach across the entire Muş province and surrounding districts. If you're in any of the regions listed below, don't hesitate to call.",
-    "callout": "Not on the list? Call us anyway — chances are we can still reach you."
+    "kicker": "Coverage",
+    "title": "Where We Operate",
+    "subtitle": "We cover Varto, Hınıs, Muş and surroundings. Not on the list? Call anyway.",
+    "callout": "Not on the list? Call us — we'll probably still come."
   },
   "about": {
-    "kicker": "Why Varto Çekici?",
+    "kicker": "Why Us",
     "title": "We Don't Leave You Stranded",
-    "subtitle": "Local crew, fast response, honest pricing.",
+    "subtitle": "Local team. Fast. Honest pricing.",
     "items": {
       "local": {
-        "title": "Local Crew",
-        "description": "We know Varto and the surrounding region inside out. We reach you via the shortest route, fast."
+        "title": "Locals",
+        "description": "We know the roads. We reach you fast."
       },
       "fast": {
-        "title": "Fast Response",
-        "description": "The moment you call, our team is moving. Every minute counts when you're stranded."
+        "title": "Fast",
+        "description": "We move the moment you call."
       },
       "honest": {
-        "title": "Honest Pricing",
-        "description": "We tell you the distance and the price on the phone. No surprises later."
+        "title": "Fair Pricing",
+        "description": "Distance and price agreed on the phone. No surprises."
       },
       "ready": {
-        "title": "Any Weather, Any Time",
-        "description": "Snow, rain, night, holiday — it doesn't matter. We are at your service 24/7."
+        "title": "Any Conditions",
+        "description": "Day, night, snow, rain, holiday — doesn't matter. 24/7."
       }
     }
   },
   "contact": {
     "kicker": "Contact",
     "title": "Get in Touch",
-    "subtitle": "In an emergency, call directly. For general questions, WhatsApp or email us.",
+    "subtitle": "In an emergency, call directly. For questions, WhatsApp or email.",
     "phoneLabel": "Phone",
     "whatsappLabel": "WhatsApp",
     "emailLabel": "Email",
-    "hoursLabel": "Working Hours",
+    "hoursLabel": "Hours",
     "addressLabel": "Address",
     "instagramLabel": "Instagram",
     "callCta": "Call Now",
     "whatsappCta": "Message on WhatsApp"
   },
   "footer": {
-    "tagline": "Varto's 24/7 roadside assistance line.",
-    "quickLinks": "Quick Links",
+    "tagline": "Varto's 24/7 roadside line.",
+    "quickLinks": "Links",
     "contact": "Contact",
     "legal": "Legal",
     "kvkk": "Privacy Notice (KVKK)",
@@ -127,7 +142,7 @@
     "close": "Close",
     "kvkk": {
       "title": "Privacy Notice (KVKK)",
-      "lastUpdated": "Last updated: 02.06.2026",
+      "lastUpdated": "Last updated: 03.06.2026",
       "body": [
         {
           "heading": "Data Controller",
@@ -153,7 +168,7 @@
     },
     "cookies": {
       "title": "Cookie Policy",
-      "lastUpdated": "Last updated: 02.06.2026",
+      "lastUpdated": "Last updated: 03.06.2026",
       "body": [
         {
           "heading": "What Are Cookies?",

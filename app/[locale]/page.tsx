@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
+import { Gallery } from "@/components/Gallery";
 import { ServiceArea } from "@/components/ServiceArea";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
@@ -26,6 +27,7 @@ export default async function HomePage({
       <main>
         <Hero locale={locale as "tr" | "en"} />
         <Services />
+        <Gallery />
         <ServiceArea />
         <About />
         <Contact locale={locale as "tr" | "en"} />

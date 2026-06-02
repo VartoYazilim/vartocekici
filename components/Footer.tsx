@@ -44,6 +44,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#galeri" className="text-ink-200 hover:text-brand-400 transition">
+                  {navT("gallery")}
+                </a>
+              </li>
+              <li>
                 <a href="#bolge" className="text-ink-200 hover:text-brand-400 transition">
                   {navT("area")}
                 </a>
