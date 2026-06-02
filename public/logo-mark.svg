@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Varto Çekici">
+  <title>Varto Çekici</title>
+  <defs>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <!-- Octagonal road-sign style badge -->
+  <path
+    d="M20 4 L44 4 L60 20 L60 44 L44 60 L20 60 L4 44 L4 20 Z"
+    fill="url(#badge)"
+    stroke="#0B1220"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  <!-- Stylized hook + chevron forming a V -->
+  <g fill="none" stroke="#0B1220" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- V chevron (Varto) -->
+    <path d="M16 20 L32 42 L48 20"/>
+    <!-- Hook curl at the bottom — tow-hook reference -->
+    <path d="M32 42 Q32 50 38 50 Q44 50 44 46" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "title": "Varto Çekici | 24/7 Towing & Roadside Assistance — Muş Varto",
+    "description": "24/7 towing and roadside assistance in Varto, Hınıs, Muş and surrounding regions of Eastern Turkey. Call now: +90 553 181 57 91. City, intercity, off-road, battery, tire, fuel and lockout services.",
+    "keywords": "Varto towing, Muş towing, Varto roadside assistance, Hınıs tow truck, Varto auto recovery, 24/7 towing Muş, off road recovery Varto, Erzurum Muş highway towing"
+  },
+  "nav": {
+    "services": "Services",
+    "area": "Service Area",
+    "about": "About",
+    "contact": "Contact",
+    "callNow": "Call Now"
+  },
+  "hero": {
+    "badge": "Open 24/7 · Fast Response",
+    "title": "Stranded on the Road? One Call Away.",
+    "subtitle": "24/7 towing and auto recovery across Varto, Hınıs, Muş and the surrounding region. City, intercity, off-road — wherever you are, we'll come.",
+    "callCta": "Call Now",
+    "whatsappCta": "Message on WhatsApp",
+    "stats": {
+      "availability": "Always Open",
+      "response": "Fast Response",
+      "coverage": "Wide Coverage Area"
+    }
+  },
+  "services": {
+    "kicker": "Services",
+    "title": "Ready for Anything You'll Face on the Road",
+    "subtitle": "One phone call, day or night, snow or shine — we are on our way.",
+    "items": {
+      "tow": {
+        "title": "City & Intercity Towing",
+        "description": "We tow your broken-down or accident vehicle safely and quickly to any destination you choose."
+      },
+      "offroad": {
+        "title": "Off-Road & Field Recovery",
+        "description": "Stuck in snow, mud, a steep slope, or off the road? Our specialized equipment gets your vehicle out."
+      },
+      "battery": {
+        "title": "Battery Boost",
+        "description": "Dead battery? We jumpstart your vehicle on the spot so you can get back on the road."
+      },
+      "tire": {
+        "title": "Tire Change & Repair",
+        "description": "Flat or low tire — we come to your location and get you rolling again."
+      },
+      "fuel": {
+        "title": "Fuel Delivery",
+        "description": "Out of fuel? We bring you fuel from the nearest station."
+      },
+      "lockout": {
+        "title": "Lockout & Key Service",
+        "description": "Lost your key or locked it inside the car? We provide professional assistance."
+      },
+      "accident": {
+        "title": "Post-Accident Towing",
+        "description": "After an accident, we transport your vehicle to a service center or any location you choose."
+      },
+      "heavy": {
+        "title": "Every Vehicle Type",
+        "description": "Sedan, SUV, pickup, light commercial — towing service for all vehicle types."
+      }
+    }
+  },
+  "area": {
+    "kicker": "Service Area",
+    "title": "Based in Varto, Covering the Whole Region",
+    "subtitle": "Our primary service area is Varto, but we reach across the entire Muş province and surrounding districts. If you're in any of the regions listed below, don't hesitate to call.",
+    "callout": "Not on the list? Call us anyway — chances are we can still reach you."
+  },
+  "about": {
+    "kicker": "Why Varto Çekici?",
+    "title": "We Don't Leave You Stranded",
+    "subtitle": "Local crew, fast response, honest pricing.",
+    "items": {
+      "local": {
+        "title": "Local Crew",
+        "description": "We know Varto and the surrounding region inside out. We reach you via the shortest route, fast."
+      },
+      "fast": {
+        "title": "Fast Response",
+        "description": "The moment you call, our team is moving. Every minute counts when you're stranded."
+      },
+      "honest": {
+        "title": "Honest Pricing",
+        "description": "We tell you the distance and the price on the phone. No surprises later."
+      },
+      "ready": {
+        "title": "Any Weather, Any Time",
+        "description": "Snow, rain, night, holiday — it doesn't matter. We are at your service 24/7."
+      }
+    }
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Get in Touch",
+    "subtitle": "In an emergency, call directly. For general questions, WhatsApp or email us.",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "emailLabel": "Email",
+    "hoursLabel": "Working Hours",
+    "addressLabel": "Address",
+    "instagramLabel": "Instagram",
+    "callCta": "Call Now",
+    "whatsappCta": "Message on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Varto's 24/7 roadside assistance line.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "legal": "Legal",
+    "kvkk": "Privacy Notice (KVKK)",
+    "cookies": "Cookie Policy",
+    "rights": "All rights reserved.",
+    "credit": "Hosted on Vercel."
+  },
+  "floatingCta": {
+    "call": "Call",
+    "whatsapp": "WhatsApp"
+  },
+  "language": {
+    "label": "Language",
+    "tr": "Turkish",
+    "en": "English"
+  },
+  "legal": {
+    "close": "Close",
+    "kvkk": {
+      "title": "Privacy Notice (KVKK)",
+      "lastUpdated": "Last updated: 02.06.2026",
+      "body": [
+        {
+          "heading": "Data Controller",
+          "text": "This notice has been prepared by Varto Çekici Oto Kurtarma (the \"Business\") under Turkish Personal Data Protection Law No. 6698 (\"KVKK\")."
+        },
+        {
+          "heading": "Personal Data Processed",
+          "text": "When you visit our site, your IP address and browser information may be collected automatically for technical reasons. When you contact us via phone or WhatsApp, your name, phone number, vehicle and location details are processed solely to provide you with service."
+        },
+        {
+          "heading": "Purposes of Processing",
+          "text": "Your data is processed to deliver towing and roadside assistance services, to communicate with customers, to improve service quality, and to fulfill legal obligations."
+        },
+        {
+          "heading": "Data Sharing",
+          "text": "Your personal data is not shared with third parties without your explicit consent, except for lawful requests from public authorities."
+        },
+        {
+          "heading": "Your Rights",
+          "text": "Under Article 11 of KVKK, you have the right to access, correct, delete, or restrict the processing of your data. Requests can be sent to vartocekici@gmail.com."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "lastUpdated": "Last updated: 02.06.2026",
+      "body": [
+        {
+          "heading": "What Are Cookies?",
+          "text": "Cookies are small text files placed in your browser by the websites you visit. They help the site work better and allow your visit to be analyzed."
+        },
+        {
+          "heading": "Cookies We Use",
+          "text": "We only use essential functional cookies along with anonymous measurement cookies from Vercel Analytics and Vercel Speed Insights, which do not contain personal identifiers."
+        },
+        {
+          "heading": "Third-Party Cookies",
+          "text": "Vercel infrastructure cookies may be used for measurement and performance data. This data cannot be linked to identifiable individuals."
+        },
+        {
+          "heading": "Your Cookie Choices",
+          "text": "You can delete or block cookies in your browser settings. Disabling some cookies may cause certain features of the site to malfunction."
+        },
+        {
+          "heading": "Contact",
+          "text": "For questions about our cookie policy, please contact vartocekici@gmail.com."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "title": "Varto Çekici | 7/24 Yol Yardım ve Oto Kurtarma — Muş Varto",
+    "description": "Varto, Hınıs, Muş ve civar bölgelerde 7 gün 24 saat çekici, oto kurtarma ve yol yardım hizmeti. Hemen arayın: 0 553 181 57 91. Şehir içi/dışı, off-road, akü, lastik, yakıt, kilit hizmetleri.",
+    "keywords": "Varto çekici, Muş çekici, Varto oto kurtarma, Hınıs çekici, Varto yol yardım, Muş Varto çekici, oto kurtarma Varto, 7/24 çekici Muş, off road kurtarma Varto, Erzurum Muş karayolu çekici"
+  },
+  "nav": {
+    "services": "Hizmetler",
+    "area": "Hizmet Bölgesi",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "callNow": "Hemen Ara"
+  },
+  "hero": {
+    "badge": "7/24 Açık · Hızlı Müdahale",
+    "title": "Yolda Kaldınız mı? Tek Aramayla Yanınızdayız.",
+    "subtitle": "Varto, Hınıs, Muş ve tüm civar bölgelerde 7 gün 24 saat çekici ve oto kurtarma hizmeti. Şehir içi, şehir dışı, off-road — neredeyseniz oradayız.",
+    "callCta": "Hemen Ara",
+    "whatsappCta": "WhatsApp ile Yaz",
+    "stats": {
+      "availability": "Kesintisiz Hizmet",
+      "response": "Hızlı Müdahale",
+      "coverage": "Geniş Hizmet Bölgesi"
+    }
+  },
+  "services": {
+    "kicker": "Hizmetlerimiz",
+    "title": "Yolda Karşılaşacağınız Her Duruma Hazırız",
+    "subtitle": "Tek bir telefonla, gece gündüz, kar kış demeden yanınıza geliyoruz.",
+    "items": {
+      "tow": {
+        "title": "Şehir İçi ve Şehir Dışı Çekici",
+        "description": "Arızalı veya kazalı aracınızı dilediğiniz noktaya, güvenli ve hızlı şekilde taşıyoruz."
+      },
+      "offroad": {
+        "title": "Off-Road ve Arazi Kurtarma",
+        "description": "Karda, çamurda, dik yamaçta, yol dışında — özel ekipmanlarımızla aracınızı kurtarıyoruz."
+      },
+      "battery": {
+        "title": "Akü Takviyesi",
+        "description": "Aküsü biten aracınıza yerinde takviye yapıyoruz, yolunuza devam edin."
+      },
+      "tire": {
+        "title": "Lastik Değişimi ve Tamiri",
+        "description": "Patlak veya inik lastik için bulunduğunuz yere geliyoruz."
+      },
+      "fuel": {
+        "title": "Yakıt İkmali",
+        "description": "Yakıtı biten araçlara en yakın istasyondan yakıt ulaştırıyoruz."
+      },
+      "lockout": {
+        "title": "Anahtar / Kilit Hizmeti",
+        "description": "Anahtarınızı kaybettiyseniz veya araç içinde kaldıysa profesyonel yardım."
+      },
+      "accident": {
+        "title": "Kaza Sonrası Çekme",
+        "description": "Trafik kazası sonrası aracınızı servise veya istediğiniz noktaya naklediyoruz."
+      },
+      "heavy": {
+        "title": "Her Tip Araç",
+        "description": "Otomobil, SUV, kamyonet, hafif ticari — tüm araç tipleri için çekici hizmeti."
+      }
+    }
+  },
+  "area": {
+    "kicker": "Hizmet Bölgesi",
+    "title": "Varto Merkezli, Bölgenin Her Köşesinde",
+    "subtitle": "Ana hizmet bölgemiz Varto olmakla birlikte, Muş ili ve çevre ilçelerin tamamına ulaşıyoruz. Aşağıdaki bir bölgedeyseniz çekinmeden arayın.",
+    "callout": "Listede yok mu? Yine de arayın — büyük ihtimalle gelebiliriz."
+  },
+  "about": {
+    "kicker": "Neden Varto Çekici?",
+    "title": "Yolda Yalnız Bırakmıyoruz",
+    "subtitle": "Yerel ekip, hızlı müdahale, dürüst fiyatlandırma.",
+    "items": {
+      "local": {
+        "title": "Bölgenin İnsanı",
+        "description": "Varto ve çevresini iyi biliyoruz. En kısa yoldan, en hızlı şekilde size ulaşırız."
+      },
+      "fast": {
+        "title": "Hızlı Müdahale",
+        "description": "Arama anından itibaren ekibimiz harekete geçer. Zaman, yolda kalan için kıymetlidir."
+      },
+      "honest": {
+        "title": "Dürüst Fiyat",
+        "description": "Mesafeyi ve durumunuzu telefonda söyleriz. Sonradan sürpriz yok."
+      },
+      "ready": {
+        "title": "Her Hava, Her Zaman",
+        "description": "Kar, yağmur, gece, bayram fark etmez. 7 gün 24 saat hizmetinizdeyiz."
+      }
+    }
+  },
+  "contact": {
+    "kicker": "İletişim",
+    "title": "Bize Ulaşın",
+    "subtitle": "Acil durumda doğrudan arayın. Bilgi için WhatsApp ya da e-posta yazabilirsiniz.",
+    "phoneLabel": "Telefon",
+    "whatsappLabel": "WhatsApp",
+    "emailLabel": "E-posta",
+    "hoursLabel": "Çalışma Saatleri",
+    "addressLabel": "Adres",
+    "instagramLabel": "Instagram",
+    "callCta": "Hemen Ara",
+    "whatsappCta": "WhatsApp Yaz"
+  },
+  "footer": {
+    "tagline": "Varto'nun 7/24 yol yardım hattı.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contact": "İletişim",
+    "legal": "Yasal",
+    "kvkk": "KVKK Aydınlatma Metni",
+    "cookies": "Çerez Politikası",
+    "rights": "Tüm hakları saklıdır.",
+    "credit": "Vercel altyapısı ile yayında."
+  },
+  "floatingCta": {
+    "call": "Ara",
+    "whatsapp": "WhatsApp"
+  },
+  "language": {
+    "label": "Dil",
+    "tr": "Türkçe",
+    "en": "İngilizce"
+  },
+  "legal": {
+    "close": "Kapat",
+    "kvkk": {
+      "title": "KVKK Aydınlatma Metni",
+      "lastUpdated": "Son güncelleme: 02.06.2026",
+      "body": [
+        {
+          "heading": "Veri Sorumlusu",
+          "text": "İşbu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamında, Varto Çekici Oto Kurtarma (\"İşletme\") tarafından hazırlanmıştır."
+        },
+        {
+          "heading": "İşlenen Kişisel Veriler",
+          "text": "Sitemizi ziyaret ettiğinizde teknik nedenlerle IP adresiniz ve tarayıcı bilgileriniz otomatik olarak toplanabilir. Bize telefon veya WhatsApp üzerinden ulaştığınızda paylaştığınız ad, soyad, telefon numarası, araç bilgisi ve konum bilgileri yalnızca size hizmet sunmak amacıyla işlenir."
+        },
+        {
+          "heading": "İşleme Amaçları",
+          "text": "Toplanan veriler; çekici ve yol yardım hizmetinin sunulması, müşterilerle iletişim kurulması, hizmet kalitesinin geliştirilmesi ve yasal yükümlülüklerin yerine getirilmesi amaçlarıyla işlenir."
+        },
+        {
+          "heading": "Veri Aktarımı",
+          "text": "Kişisel verileriniz, açık rızanız olmadıkça üçüncü kişilerle paylaşılmaz. Yetkili kamu kurumlarının yasal talepleri saklıdır."
+        },
+        {
+          "heading": "Haklarınız",
+          "text": "KVKK madde 11 kapsamında; verilerinize erişme, düzeltilmesini, silinmesini veya işlenmesinin sınırlandırılmasını talep etme hakkına sahipsiniz. Talepleriniz için vartocekici@gmail.com adresine yazabilirsiniz."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Çerez Politikası",
+      "lastUpdated": "Son güncelleme: 02.06.2026",
+      "body": [
+        {
+          "heading": "Çerez Nedir?",
+          "text": "Çerezler, ziyaret ettiğiniz web sitesi tarafından tarayıcınıza yerleştirilen küçük metin dosyalarıdır. Bu dosyalar, sitenin daha iyi çalışmasını ve ziyaretinizin analiz edilmesini sağlar."
+        },
+        {
+          "heading": "Hangi Çerezleri Kullanıyoruz?",
+          "text": "Sitemizde yalnızca temel işlevsel çerezler ile Vercel Analytics ve Vercel Speed Insights tarafından kullanılan, kişisel tanımlayıcı içermeyen anonim ölçüm çerezleri kullanılmaktadır."
+        },
+        {
+          "heading": "Üçüncü Taraf Çerezleri",
+          "text": "Ölçüm ve performans verisi için Vercel altyapısının çerezleri kullanılabilir. Bu veriler kimliği belirli kişilerle ilişkilendirilemez."
+        },
+        {
+          "heading": "Çerez Tercihleriniz",
+          "text": "Tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz. Bazı çerezleri devre dışı bırakmanız durumunda sitenin bazı işlevleri çalışmayabilir."
+        },
+        {
+          "heading": "İletişim",
+          "text": "Çerez politikamız hakkında sorularınız için vartocekici@gmail.com adresinden bize ulaşabilirsiniz."
+        }
+      ]
+    }
+  }
+}
