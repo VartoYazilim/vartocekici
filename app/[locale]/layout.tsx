@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Inter, Inter_Tight, Anton, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { notFound } from "next/navigation";
@@ -23,12 +23,28 @@ const interTight = Inter_Tight({
   display: "swap",
 });
 
+// Tall condensed display — used for the "7/24" numeric mark
+const anton = Anton({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  variable: "--font-anton",
+  display: "swap",
+});
+
+// Mono for small labels, the wordmark caption, and the kicker
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "700"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0B1220",
+  themeColor: "#0F1115",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -115,7 +131,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${interTight.variable}`}
+      className={`${inter.variable} ${interTight.variable} ${anton.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen antialiased">

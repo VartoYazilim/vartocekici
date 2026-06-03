@@ -50,7 +50,7 @@ function AboutCard({
 }) {
   return (
     <div className="relative rounded-xl border border-ink-800 bg-gradient-to-b from-ink-900/80 to-ink-950 p-6">
-      <div className="absolute -top-3 left-6 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-ink-950 shadow-[0_8px_24px_-8px_rgba(245,158,11,0.6)]">
+      <div className="absolute -top-3 left-6 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-ink-950 shadow-[0_8px_24px_-8px_rgba(163,230,53,0.5)]">
         {icon}
       </div>
       <h3 className="mt-6 font-display text-lg font-bold text-ink-50 leading-snug">

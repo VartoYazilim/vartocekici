@@ -68,7 +68,7 @@ function ServiceCard({
         className="absolute inset-x-0 top-0 h-px opacity-0 transition-opacity group-hover:opacity-100"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(245,158,11,0.7), transparent)",
+            "linear-gradient(90deg, transparent, rgba(163,230,53,0.7), transparent)",
         }}
         aria-hidden="true"
       />

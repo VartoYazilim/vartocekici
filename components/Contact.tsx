@@ -32,7 +32,7 @@ export function Contact({ locale }: { locale: "tr" | "en" }) {
               className="absolute -right-12 -top-12 h-64 w-64 rounded-full"
               style={{
                 background:
-                  "radial-gradient(circle, rgba(245,158,11,0.18) 0%, transparent 70%)",
+                  "radial-gradient(circle, rgba(163,230,53,0.18) 0%, transparent 70%)",
               }}
               aria-hidden="true"
             />

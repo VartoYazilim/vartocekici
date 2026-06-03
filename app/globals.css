@@ -1,43 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — amber gold on deep slate. Industry-resonant, distinctive. */
-  --color-brand-50:  #FFFBEB;
-  --color-brand-100: #FEF3C7;
-  --color-brand-200: #FDE68A;
-  --color-brand-300: #FCD34D;
-  --color-brand-400: #FBBF24;
-  --color-brand-500: #F59E0B;
-  --color-brand-600: #D97706;
-  --color-brand-700: #B45309;
-  --color-brand-800: #92400E;
-  --color-brand-900: #78350F;
+  /* Brand palette — Carbon Lime. Lime green (#A3E635) on carbon (#0F1115).
+     Hi-vis safety-vest energy. Distinct from typical SaaS sites. */
+  --color-brand-50:  #F7FEE7;
+  --color-brand-100: #ECFCCB;
+  --color-brand-200: #D9F99D;
+  --color-brand-300: #BEF264;
+  --color-brand-400: #BEF264;  /* alias of lime-300 — soft accent */
+  --color-brand-500: #A3E635;  /* primary */
+  --color-brand-600: #84CC16;
+  --color-brand-700: #65A30D;  /* dark lime — for light backgrounds */
+  --color-brand-800: #4D7C0F;
+  --color-brand-900: #365314;
 
-  --color-ink-50:  #F8FAFC;
-  --color-ink-100: #F1F5F9;
-  --color-ink-200: #E2E8F0;
-  --color-ink-300: #CBD5E1;
-  --color-ink-400: #94A3B8;
-  --color-ink-500: #64748B;
-  --color-ink-600: #475569;
-  --color-ink-700: #334155;
-  --color-ink-800: #1E293B;
-  --color-ink-900: #0F172A;
-  --color-ink-950: #0B1220;
+  /* Ink — zinc-based carbon greys (cooler/blacker than slate). */
+  --color-ink-50:  #FAFAFA;
+  --color-ink-100: #F4F4F5;
+  --color-ink-200: #E4E4E7;
+  --color-ink-300: #D4D4D8;
+  --color-ink-400: #A1A1AA;
+  --color-ink-500: #71717A;
+  --color-ink-600: #52525B;
+  --color-ink-700: #3F3F46;
+  --color-ink-800: #27272A;
+  --color-ink-900: #18181B;
+  --color-ink-950: #0F1115; /* carbon */
 
   --color-success-500: #10B981;
   --color-emergency-500: #DC2626;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: var(--font-inter-tight), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-numeric: var(--font-anton), "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --radius-sm: 0.375rem;
   --radius-md: 0.625rem;
   --radius-lg: 0.875rem;
   --radius-xl: 1.25rem;
 
-  --shadow-brand: 0 8px 32px -8px rgb(245 158 11 / 0.45);
-  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 8px 24px -12px rgb(0 0 0 / 0.5);
+  --shadow-brand: 0 8px 32px -8px rgb(163 230 53 / 0.4);
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 8px 24px -12px rgb(0 0 0 / 0.6);
 }
 
 @layer base {
@@ -60,13 +64,11 @@
     scroll-margin-top: 5rem;
   }
 
-  /* Selection */
   ::selection {
     background-color: var(--color-brand-500);
     color: var(--color-ink-950);
   }
 
-  /* Focus ring */
   *:focus-visible {
     outline: 2px solid var(--color-brand-400);
     outline-offset: 2px;
@@ -109,6 +111,7 @@
   .kicker {
     @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em];
     color: var(--color-brand-400);
+    font-family: var(--font-mono);
   }
   .kicker::before {
     content: "";

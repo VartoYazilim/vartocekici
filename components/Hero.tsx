@@ -14,7 +14,7 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
         className="absolute left-1/2 top-0 -z-10 h-[600px] w-[1200px] -translate-x-1/2 rounded-full"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(245,158,11,0.18) 0%, transparent 60%)",
+            "radial-gradient(ellipse at center, rgba(163,230,53,0.18) 0%, transparent 60%)",
         }}
         aria-hidden="true"
       />
@@ -23,7 +23,7 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
             {/* Status badge with live pulse */}
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-500/30 bg-brand-500/10 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-brand-300">
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-500/40 bg-brand-500/10 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-brand-300 font-mono uppercase tracking-wider">
               <span className="relative inline-flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-70 animate-ping-soft" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-400 animate-pulse-soft" />
@@ -84,7 +84,7 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
             </dl>
           </div>
 
-          {/* Decorative visual — stylized recovery scene */}
+          {/* Decorative visual */}
           <div className="relative hidden lg:block w-[420px] xl:w-[480px] shrink-0">
             <HeroVisual />
           </div>
@@ -108,7 +108,7 @@ function StatItem({
   return (
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-1.5">{icon}</div>
-      <dt className="text-xs sm:text-sm text-ink-400">{label}</dt>
+      <dt className="text-xs sm:text-sm text-ink-400 font-mono uppercase tracking-wider">{label}</dt>
       <dd
         className={`font-display font-extrabold text-ink-50 ${
           isSymbol ? "text-2xl" : "text-xl sm:text-2xl"
@@ -130,58 +130,94 @@ function HeroVisual() {
     >
       <defs>
         <linearGradient id="heroVisualBg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#1E293B" />
-          <stop offset="100%" stopColor="#0F172A" />
-        </linearGradient>
-        <linearGradient id="heroVisualAccent" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#FBBF24" />
-          <stop offset="100%" stopColor="#F59E0B" />
+          <stop offset="0%" stopColor="#27272A" />
+          <stop offset="100%" stopColor="#18181B" />
         </linearGradient>
         <radialGradient id="heroVisualGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
+          <stop offset="0%" stopColor="#A3E635" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#A3E635" stopOpacity="0" />
         </radialGradient>
+        <pattern id="heroVisualGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M20 0 L0 0 0 20" fill="none" stroke="#27272A" strokeWidth="0.5" opacity="0.6"/>
+        </pattern>
       </defs>
 
-      {/* Background ring */}
+      {/* Outer glow */}
       <circle cx="240" cy="240" r="220" fill="url(#heroVisualGlow)" />
+
+      {/* Dashed outer ring */}
       <circle
         cx="240"
         cy="240"
         r="180"
         fill="none"
-        stroke="#1E293B"
+        stroke="#3F3F46"
         strokeWidth="1"
         strokeDasharray="2 6"
       />
+
+      {/* Inner badge */}
       <circle
         cx="240"
         cy="240"
         r="140"
         fill="url(#heroVisualBg)"
-        stroke="#334155"
+        stroke="#3F3F46"
         strokeWidth="1"
       />
+      <circle
+        cx="240"
+        cy="240"
+        r="140"
+        fill="url(#heroVisualGrid)"
+        opacity="0.5"
+      />
 
-      {/* Center mark */}
-      <g transform="translate(168 168) scale(1.875)">
-        <path
-          d="M20 4 L44 4 L60 20 L60 44 L44 60 L20 60 L4 44 L4 20 Z"
-          fill="url(#heroVisualAccent)"
-          stroke="#0B1220"
-          strokeWidth="2"
-          strokeLinejoin="round"
-        />
-        <g
-          fill="none"
-          stroke="#0B1220"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      {/* "7/24" numeric mark at center */}
+      <g>
+        <text
+          x="172"
+          y="266"
+          fontFamily="'Arial Black', 'Helvetica Neue', sans-serif"
+          fontSize="98"
+          fontWeight="900"
+          fill="#A3E635"
+          letterSpacing="-4"
         >
-          <path d="M16 20 L32 42 L48 20" />
-          <path d="M32 42 Q32 50 38 50 Q44 50 44 46" />
-        </g>
+          7
+        </text>
+        <line
+          x1="216"
+          y1="284"
+          x2="244"
+          y2="186"
+          stroke="#A3E635"
+          strokeWidth="7"
+          strokeLinecap="round"
+        />
+        <text
+          x="236"
+          y="266"
+          fontFamily="'Arial Black', 'Helvetica Neue', sans-serif"
+          fontSize="98"
+          fontWeight="900"
+          fill="#A3E635"
+          letterSpacing="-4"
+        >
+          24
+        </text>
+        <text
+          x="240"
+          y="306"
+          textAnchor="middle"
+          fontFamily="ui-sans-serif, system-ui, sans-serif"
+          fontSize="11"
+          fontWeight="800"
+          fill="#FAFAFA"
+          letterSpacing="3.5"
+        >
+          VARTO ÇEKİCİ
+        </text>
       </g>
 
       {/* Orbital tags */}
@@ -198,7 +234,7 @@ function HeroVisual() {
         cy="240"
         r="200"
         fill="none"
-        stroke="#F59E0B"
+        stroke="#A3E635"
         strokeWidth="2"
         opacity="0.25"
       >
@@ -229,8 +265,8 @@ function OrbitalTag({ cx, cy, label }: { cx: number; cy: number; label: string }
         width={textW}
         height={28}
         rx={14}
-        fill="#0F172A"
-        stroke="#334155"
+        fill="#18181B"
+        stroke="#3F3F46"
         strokeWidth="1"
       />
       <text
@@ -239,9 +275,9 @@ function OrbitalTag({ cx, cy, label }: { cx: number; cy: number; label: string }
         textAnchor="middle"
         fontSize="13"
         fontWeight="700"
-        fill="#FBBF24"
-        fontFamily="ui-sans-serif, system-ui, sans-serif"
-        letterSpacing="1"
+        fill="#BEF264"
+        fontFamily="ui-monospace, monospace"
+        letterSpacing="1.5"
       >
         {label}
       </text>

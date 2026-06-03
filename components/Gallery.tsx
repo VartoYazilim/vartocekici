@@ -40,21 +40,21 @@ export function Gallery() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 placeholder="empty"
               />
-              {/* Warm dark overlay for brand cohesion */}
+              {/* Dark carbon overlay for brand cohesion */}
               <div
                 className="absolute inset-0 mix-blend-multiply"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(11,18,32,0.25) 0%, rgba(11,18,32,0.85) 100%)",
+                    "linear-gradient(180deg, rgba(15,17,21,0.25) 0%, rgba(15,17,21,0.85) 100%)",
                 }}
                 aria-hidden="true"
               />
-              {/* Amber wash */}
+              {/* Lime wash */}
               <div
-                className="absolute inset-0 opacity-15 mix-blend-overlay"
+                className="absolute inset-0 opacity-20 mix-blend-overlay"
                 style={{
                   background:
-                    "radial-gradient(ellipse at top left, #F59E0B 0%, transparent 60%)",
+                    "radial-gradient(ellipse at top left, #A3E635 0%, transparent 60%)",
                 }}
                 aria-hidden="true"
               />
@@ -62,7 +62,7 @@ export function Gallery() {
               <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
                 <div className="flex items-center gap-2">
                   <span className="h-1 w-6 rounded-full bg-brand-500" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-300">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.22em] text-brand-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
