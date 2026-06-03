@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Phone, MessageCircle, Clock, Zap, MapPin } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { business, telHref, whatsappHref } from "@/lib/business";
 
 export function Hero({ locale }: { locale: "tr" | "en" }) {
@@ -64,24 +64,6 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
               </a>
             </div>
 
-            <dl className="mt-10 grid grid-cols-3 gap-4 sm:gap-8 max-w-md">
-              <StatItem
-                icon={<Clock size={18} className="text-brand-400" />}
-                label={t("stats.availability")}
-                value="7/24"
-              />
-              <StatItem
-                icon={<Zap size={18} className="text-brand-400" />}
-                label={t("stats.response")}
-                value="⚡"
-                isSymbol
-              />
-              <StatItem
-                icon={<MapPin size={18} className="text-brand-400" />}
-                label={t("stats.coverage")}
-                value="Muş+"
-              />
-            </dl>
           </div>
 
           {/* Decorative visual */}
@@ -91,32 +73,6 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
         </div>
       </div>
     </section>
-  );
-}
-
-function StatItem({
-  icon,
-  label,
-  value,
-  isSymbol = false,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-  isSymbol?: boolean;
-}) {
-  return (
-    <div className="flex flex-col gap-1">
-      <div className="flex items-center gap-1.5">{icon}</div>
-      <dt className="text-xs sm:text-sm text-ink-400 font-mono uppercase tracking-wider">{label}</dt>
-      <dd
-        className={`font-display font-extrabold text-ink-50 ${
-          isSymbol ? "text-2xl" : "text-xl sm:text-2xl"
-        }`}
-      >
-        {value}
-      </dd>
-    </div>
   );
 }
 

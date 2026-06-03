@@ -17,12 +17,7 @@
     "title": "Yolda mı Kaldınız? Hemen Arayın.",
     "subtitle": "Varto, Hınıs, Muş ve çevresinde 7/24 çekici, oto kurtarma ve yol yardım hizmeti.",
     "callCta": "Hemen Ara",
-    "whatsappCta": "WhatsApp",
-    "stats": {
-      "availability": "Açık",
-      "response": "Hızlı",
-      "coverage": "Geniş Bölge"
-    }
+    "whatsappCta": "WhatsApp"
   },
   "services": {
     "kicker": "Hizmetler",
