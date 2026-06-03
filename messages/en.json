@@ -69,12 +69,10 @@
     "subtitle": "Photos from our field operations.",
     "note": "Placeholder images. Real vehicle photos will be added soon.",
     "items": [
-      "City Towing",
-      "Off-Road Recovery",
-      "Night Operation",
-      "Snow Recovery",
-      "Battery Boost",
-      "Intercity Towing"
+      "Intercity Towing · Highway",
+      "Post-Accident Recovery · SUV",
+      "Off-Road Tractor Recovery",
+      "Damaged Vehicle Recovery"
     ]
   },
   "area": {
