@@ -54,7 +54,7 @@ export function Header({ locale }: { locale: "tr" | "en" }) {
           aria-label={business.name}
           className="flex items-center"
         >
-          <Logo className="h-9" variant="horizontal" />
+          <Logo variant="horizontal" />
         </a>
 
         <nav

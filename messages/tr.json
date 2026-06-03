@@ -15,7 +15,7 @@
   "hero": {
     "badge": "7/24 Açık · Hızlı Müdahale",
     "title": "Yolda mı Kaldınız? Hemen Arayın.",
-    "subtitle": "Varto, Hınıs, Muş ve çevresinde 7/24 çekici hizmeti. Şehir içi, şehir dışı, off-road — neredeyseniz oradayız.",
+    "subtitle": "Varto, Hınıs, Muş ve çevresinde 7/24 çekici, oto kurtarma ve yol yardım hizmeti.",
     "callCta": "Hemen Ara",
     "whatsappCta": "WhatsApp",
     "stats": {
@@ -26,8 +26,8 @@
   },
   "services": {
     "kicker": "Hizmetler",
-    "title": "Ne Yapıyoruz?",
-    "subtitle": "Bir telefon yeter — kalanı bize bırakın.",
+    "title": "Hizmetlerimiz",
+    "subtitle": "Çekici, oto kurtarma ve yol yardım hizmetleri.",
     "items": {
       "tow": {
         "title": "Şehir İçi & Şehir Dışı Çekici",
@@ -35,7 +35,7 @@
       },
       "offroad": {
         "title": "Off-Road Kurtarma",
-        "description": "Kar, çamur, yol dışı — özel ekipmanla kurtarırız."
+        "description": "Kar, çamur ve yol dışı kurtarmalar için özel ekipman kullanırız."
       },
       "battery": {
         "title": "Akü Takviyesi",
@@ -43,73 +43,73 @@
       },
       "tire": {
         "title": "Lastik Değişimi & Tamiri",
-        "description": "Patlak veya inik lastik için size geliriz."
+        "description": "Patlak veya inik lastik için bulunduğunuz yere geliriz."
       },
       "fuel": {
         "title": "Yakıt İkmali",
-        "description": "Yakıtı biten araca en yakın istasyondan yakıt getiririz."
+        "description": "Yakıtı biten araca en yakın istasyondan yakıt ulaştırırız."
       },
       "lockout": {
-        "title": "Anahtar / Kilit Hizmeti",
-        "description": "Anahtarı kaybettiyseniz ya da kapı kapandıysa yardım ederiz."
+        "title": "Anahtar & Kilit Hizmeti",
+        "description": "Anahtarın kaybolması veya araç içinde kalması durumunda yardım."
       },
       "accident": {
         "title": "Kaza Sonrası Çekme",
-        "description": "Kazalı aracı servise ya da istediğiniz yere taşırız."
+        "description": "Kazalı aracı servise veya istediğiniz adrese taşırız."
       },
       "heavy": {
         "title": "Her Tip Araç",
-        "description": "Otomobil, SUV, kamyonet, hafif ticari — hepsini çekeriz."
+        "description": "Otomobil, SUV, kamyonet ve hafif ticari araçlar için çekici hizmeti."
       }
     }
   },
   "gallery": {
     "kicker": "Galeri",
     "title": "Sahadan",
-    "subtitle": "Saha çalışmalarımızdan kareler.",
-    "note": "Demo görseller — kısa sürede gerçek araç fotoğraflarımızla değiştirilecek.",
+    "subtitle": "Saha çalışmalarımızdan fotoğraflar.",
+    "note": "Demo görseller. Gerçek araç fotoğrafları yakında eklenecek.",
     "items": [
       "Şehir İçi Çekme",
       "Off-Road Kurtarma",
-      "Gece Yarısı Müdahale",
+      "Gece Müdahale",
       "Karda Kurtarma",
-      "Yol Üstü Akü Takviyesi",
+      "Akü Takviyesi",
       "Şehir Dışı Çekme"
     ]
   },
   "area": {
     "kicker": "Bölge",
     "title": "Hizmet Bölgemiz",
-    "subtitle": "Varto, Hınıs, Muş ve çevresine gidiyoruz. Listede olmasanız bile arayın.",
-    "callout": "Listede yoksanız da arayın — büyük ihtimalle geliriz."
+    "subtitle": "Varto, Hınıs, Muş ve çevre ilçelerde hizmet veriyoruz.",
+    "callout": "Listede yer almayan bir noktada olsanız da arayabilirsiniz."
   },
   "about": {
-    "kicker": "Neden Biz?",
-    "title": "Yolda Yalnız Bırakmıyoruz",
-    "subtitle": "Yerel ekip. Hızlı. Net fiyat.",
+    "kicker": "Yaklaşım",
+    "title": "Neden Varto Çekici",
+    "subtitle": "Yerel ekip, hızlı müdahale, net fiyatlandırma.",
     "items": {
       "local": {
-        "title": "Buralıyız",
-        "description": "Yolu biliyoruz. En kısa şekilde size ulaşırız."
+        "title": "Yerel Ekip",
+        "description": "Varto ve çevresinde faaliyet gösteriyoruz."
       },
       "fast": {
         "title": "Hızlı",
-        "description": "Arama anında yola çıkarız. Vakit önemli."
+        "description": "Arama sonrası kısa sürede yola çıkarız."
       },
       "honest": {
         "title": "Net Fiyat",
-        "description": "Mesafe ve durumu telefonda konuşuruz. Sürpriz yok."
+        "description": "Mesafe ve fiyat telefonda belirlenir."
       },
       "ready": {
         "title": "Her Şartta",
-        "description": "Gece, gündüz, kar, yağmur, bayram — fark etmez. 7/24."
+        "description": "Gece, gündüz, kar, yağmur, bayram — 7/24 hizmetinizdeyiz."
       }
     }
   },
   "contact": {
     "kicker": "İletişim",
     "title": "Bize Ulaşın",
-    "subtitle": "Acil durumda doğrudan arayın. Sorular için WhatsApp ya da mail.",
+    "subtitle": "Acil durumda doğrudan arayın. Diğer iletişim için WhatsApp veya e-posta.",
     "phoneLabel": "Telefon",
     "whatsappLabel": "WhatsApp",
     "emailLabel": "E-posta",
@@ -120,14 +120,13 @@
     "whatsappCta": "WhatsApp Yaz"
   },
   "footer": {
-    "tagline": "Varto'nun 7/24 yol yardım hattı.",
+    "tagline": "7/24 çekici, oto kurtarma ve yol yardım — Muş Varto.",
     "quickLinks": "Bağlantılar",
     "contact": "İletişim",
     "legal": "Yasal",
     "kvkk": "KVKK Aydınlatma Metni",
     "cookies": "Çerez Politikası",
-    "rights": "Tüm hakları saklıdır.",
-    "credit": "Vercel üzerinde."
+    "rights": "Tüm hakları saklıdır."
   },
   "floatingCta": {
     "call": "Ara",

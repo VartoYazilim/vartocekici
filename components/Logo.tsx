@@ -1,161 +1,92 @@
 type LogoProps = {
   className?: string;
-  /** "lockup" (mark + wordmark — default), "mark" (just 7/24), "horizontal" (inline) */
+  /** "lockup" (mark + wordmark stacked — default), "horizontal" (inline), "mark" (just 7/24) */
   variant?: "lockup" | "mark" | "horizontal";
   ariaLabel?: string;
 };
 
 /**
- * Logo = "7/24" set in Anton (tall condensed) with the slash drawn as a tilted
- * line, and "VARTO ÇEKİCİ" set in JetBrains Mono with letter-spacing below.
- * The brand promise IS the mark.
+ * "7/24" mark using Anton font with a custom heavy diagonal slash.
+ * Rendered with HTML inline-flex so width is determined by the actual text
+ * metrics — no SVG viewBox clipping at small sizes.
  */
+function NumericMark({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`inline-flex items-baseline leading-none font-numeric ${className}`}
+      style={{ letterSpacing: "-0.04em" }}
+    >
+      <span>7</span>
+      {/* Custom heavy slash — visually consistent with the bold 7 and 24 */}
+      <span
+        aria-hidden="true"
+        className="relative inline-block shrink-0"
+        style={{ width: "0.30em", height: "0.92em", margin: "0 0.04em" }}
+      >
+        <svg
+          viewBox="0 0 20 60"
+          preserveAspectRatio="none"
+          className="absolute inset-0 h-full w-full"
+        >
+          <line
+            x1="18"
+            y1="6"
+            x2="2"
+            y2="54"
+            stroke="currentColor"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+        </svg>
+      </span>
+      <span>24</span>
+    </span>
+  );
+}
+
 export function Logo({
-  className = "h-10",
+  className = "",
   variant = "lockup",
   ariaLabel = "Varto Çekici · 7/24 Yol Yardım",
 }: LogoProps) {
   if (variant === "mark") {
-    // Just the 7/24 — for tiny contexts. Square-ish.
     return (
-      <svg
-        viewBox="0 0 100 64"
-        className={className}
+      <span
+        className={`inline-flex text-3xl text-brand-500 ${className}`}
         role="img"
         aria-label={ariaLabel}
-        fill="none"
       >
-        <text
-          x="0"
-          y="54"
-          fontFamily="var(--font-anton), 'Arial Black', sans-serif"
-          fontSize="62"
-          fontWeight="400"
-          fill="var(--color-brand-500, #A3E635)"
-          letterSpacing="-1"
-        >
-          7
-        </text>
-        <line
-          x1="36"
-          y1="58"
-          x2="50"
-          y2="6"
-          stroke="var(--color-brand-500, #A3E635)"
-          strokeWidth="5"
-          strokeLinecap="round"
-        />
-        <text
-          x="50"
-          y="54"
-          fontFamily="var(--font-anton), 'Arial Black', sans-serif"
-          fontSize="62"
-          fontWeight="400"
-          fill="var(--color-brand-500, #A3E635)"
-          letterSpacing="-1"
-        >
-          24
-        </text>
-      </svg>
+        <NumericMark />
+      </span>
     );
   }
 
   if (variant === "horizontal") {
-    // Single-line — 7/24 mark on left, wordmark right
     return (
-      <div className={`inline-flex items-center gap-3 ${className}`}>
-        <svg
-          viewBox="0 0 100 64"
-          className="h-full w-auto shrink-0"
-          role="img"
-          aria-label={ariaLabel}
-          fill="none"
-        >
-          <text
-            x="0"
-            y="54"
-            fontFamily="var(--font-anton), 'Arial Black', sans-serif"
-            fontSize="62"
-            fontWeight="400"
-            fill="var(--color-brand-500, #A3E635)"
-            letterSpacing="-1"
-          >
-            7
-          </text>
-          <line
-            x1="36"
-            y1="58"
-            x2="50"
-            y2="6"
-            stroke="var(--color-brand-500, #A3E635)"
-            strokeWidth="5"
-            strokeLinecap="round"
-          />
-          <text
-            x="50"
-            y="54"
-            fontFamily="var(--font-anton), 'Arial Black', sans-serif"
-            fontSize="62"
-            fontWeight="400"
-            fill="var(--color-brand-500, #A3E635)"
-            letterSpacing="-1"
-          >
-            24
-          </text>
-        </svg>
-        <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-ink-100">
+      <span
+        className={`inline-flex items-center gap-3 ${className}`}
+        role="img"
+        aria-label={ariaLabel}
+      >
+        <NumericMark className="text-[28px] sm:text-[32px] text-brand-500" />
+        <span className="font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-ink-100 whitespace-nowrap">
           Varto Çekici
         </span>
-      </div>
+      </span>
     );
   }
 
-  // Default: vertical lockup — 7/24 mark on top, "VARTO ÇEKİCİ" mono caption below
+  // lockup (default — vertical stack)
   return (
-    <div className={`inline-flex flex-col items-start ${className}`}>
-      <svg
-        viewBox="0 0 100 50"
-        className="h-[68%] w-auto"
-        role="img"
-        aria-label={ariaLabel}
-        fill="none"
-        preserveAspectRatio="xMinYMid meet"
-      >
-        <text
-          x="0"
-          y="42"
-          fontFamily="var(--font-anton), 'Arial Black', sans-serif"
-          fontSize="48"
-          fontWeight="400"
-          fill="var(--color-brand-500, #A3E635)"
-          letterSpacing="-1"
-        >
-          7
-        </text>
-        <line
-          x1="28"
-          y1="46"
-          x2="40"
-          y2="6"
-          stroke="var(--color-brand-500, #A3E635)"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <text
-          x="40"
-          y="42"
-          fontFamily="var(--font-anton), 'Arial Black', sans-serif"
-          fontSize="48"
-          fontWeight="400"
-          fill="var(--color-brand-500, #A3E635)"
-          letterSpacing="-1"
-        >
-          24
-        </text>
-      </svg>
-      <span className="mt-0.5 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.28em] text-ink-100 whitespace-nowrap">
+    <span
+      className={`inline-flex flex-col items-start gap-1.5 ${className}`}
+      role="img"
+      aria-label={ariaLabel}
+    >
+      <NumericMark className="text-5xl text-brand-500" />
+      <span className="font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-ink-100 whitespace-nowrap">
         Varto Çekici
       </span>
-    </div>
+    </span>
   );
 }

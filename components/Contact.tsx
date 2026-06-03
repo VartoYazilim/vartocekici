@@ -47,8 +47,8 @@ export function Contact({ locale }: { locale: "tr" | "en" }) {
               </a>
               <p className="mt-3 text-base text-ink-300">
                 {locale === "tr"
-                  ? "Yolda kaldınız mı? Direkt arayın — anında müdahaleye başlıyoruz."
-                  : "Stranded? Call directly — we're moving the moment you ring."}
+                  ? "Acil durumlarda doğrudan bu numarayı arayabilirsiniz."
+                  : "For emergencies, call this number directly."}
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href={telHref} className="btn btn-primary">

@@ -15,7 +15,7 @@
   "hero": {
     "badge": "Open 24/7 · Fast Response",
     "title": "Stranded? Call Now.",
-    "subtitle": "24/7 towing across Varto, Hınıs, Muş and surroundings. City, intercity, off-road — wherever you are.",
+    "subtitle": "24/7 towing, auto recovery and roadside assistance in Varto, Hınıs, Muş and surroundings.",
     "callCta": "Call Now",
     "whatsappCta": "WhatsApp",
     "stats": {
@@ -26,8 +26,8 @@
   },
   "services": {
     "kicker": "Services",
-    "title": "What We Do",
-    "subtitle": "One call. We handle the rest.",
+    "title": "Our Services",
+    "subtitle": "Towing, auto recovery and roadside assistance.",
     "items": {
       "tow": {
         "title": "City & Intercity Towing",
@@ -35,81 +35,81 @@
       },
       "offroad": {
         "title": "Off-Road Recovery",
-        "description": "Snow, mud, off-road — we get you out with the right gear."
+        "description": "We use specialized equipment for snow, mud and off-road recoveries."
       },
       "battery": {
         "title": "Battery Boost",
-        "description": "Dead battery? We jumpstart on the spot."
+        "description": "We provide on-site jumpstart for vehicles with a dead battery."
       },
       "tire": {
         "title": "Tire Change & Repair",
-        "description": "Flat or low tire — we come to you."
+        "description": "We come to your location for flat or low tires."
       },
       "fuel": {
         "title": "Fuel Delivery",
-        "description": "Out of fuel? We bring it from the nearest station."
+        "description": "We bring fuel from the nearest station when you run out."
       },
       "lockout": {
         "title": "Lockout & Key Service",
-        "description": "Lost your key or locked it inside? We help."
+        "description": "Assistance for lost keys or keys locked inside the vehicle."
       },
       "accident": {
         "title": "Post-Accident Towing",
-        "description": "We move accident vehicles to a service center or wherever you need."
+        "description": "We transport accident vehicles to a service center or your chosen location."
       },
       "heavy": {
         "title": "Every Vehicle Type",
-        "description": "Sedan, SUV, pickup, light commercial — we tow them all."
+        "description": "Towing service for sedans, SUVs, pickups and light commercial vehicles."
       }
     }
   },
   "gallery": {
     "kicker": "Gallery",
     "title": "From the Field",
-    "subtitle": "Snapshots from real jobs.",
-    "note": "Placeholder images — to be replaced with real photos soon.",
+    "subtitle": "Photos from our field operations.",
+    "note": "Placeholder images. Real vehicle photos will be added soon.",
     "items": [
       "City Towing",
       "Off-Road Recovery",
-      "Late-Night Call",
+      "Night Operation",
       "Snow Recovery",
-      "Roadside Battery Boost",
+      "Battery Boost",
       "Intercity Towing"
     ]
   },
   "area": {
     "kicker": "Coverage",
-    "title": "Where We Operate",
-    "subtitle": "We cover Varto, Hınıs, Muş and surroundings. Not on the list? Call anyway.",
-    "callout": "Not on the list? Call us — we'll probably still come."
+    "title": "Our Service Area",
+    "subtitle": "We operate in Varto, Hınıs, Muş and surrounding districts.",
+    "callout": "Not listed? You can still call."
   },
   "about": {
-    "kicker": "Why Us",
-    "title": "We Don't Leave You Stranded",
-    "subtitle": "Local team. Fast. Honest pricing.",
+    "kicker": "Approach",
+    "title": "Why Varto Çekici",
+    "subtitle": "Local team, fast response, transparent pricing.",
     "items": {
       "local": {
-        "title": "Locals",
-        "description": "We know the roads. We reach you fast."
+        "title": "Local Team",
+        "description": "We operate in Varto and the surrounding region."
       },
       "fast": {
         "title": "Fast",
-        "description": "We move the moment you call."
+        "description": "We're on the road shortly after you call."
       },
       "honest": {
         "title": "Fair Pricing",
-        "description": "Distance and price agreed on the phone. No surprises."
+        "description": "Distance and price are agreed on the phone."
       },
       "ready": {
         "title": "Any Conditions",
-        "description": "Day, night, snow, rain, holiday — doesn't matter. 24/7."
+        "description": "Day, night, snow, rain, holiday — we're available 24/7."
       }
     }
   },
   "contact": {
     "kicker": "Contact",
     "title": "Get in Touch",
-    "subtitle": "In an emergency, call directly. For questions, WhatsApp or email.",
+    "subtitle": "In an emergency, call directly. For other inquiries, WhatsApp or email.",
     "phoneLabel": "Phone",
     "whatsappLabel": "WhatsApp",
     "emailLabel": "Email",
@@ -120,14 +120,13 @@
     "whatsappCta": "Message on WhatsApp"
   },
   "footer": {
-    "tagline": "Varto's 24/7 roadside line.",
+    "tagline": "24/7 towing, auto recovery and roadside assistance — Muş Varto.",
     "quickLinks": "Links",
     "contact": "Contact",
     "legal": "Legal",
     "kvkk": "Privacy Notice (KVKK)",
     "cookies": "Cookie Policy",
-    "rights": "All rights reserved.",
-    "credit": "Hosted on Vercel."
+    "rights": "All rights reserved."
   },
   "floatingCta": {
     "call": "Call",

@@ -18,14 +18,9 @@ export default async function OpengraphImage({
     : routing.defaultLocale;
 
   const kicker = locale === "tr" ? "YOL YARDIM · 7/24" : "ROADSIDE · 24/7";
-  const coverage =
-    locale === "tr"
-      ? "Muş Varto · Hınıs · Bulanık · Karlıova"
-      : "Muş Varto · Hınıs · Bulanık · Karlıova";
-  const services =
-    locale === "tr"
-      ? "Çekici · Off-Road · Akü · Lastik · Yakıt · Kilit"
-      : "Towing · Off-Road · Battery · Tire · Fuel · Lockout";
+  const headline1 = locale === "tr" ? "Muş Varto" : "Muş Varto";
+  const headline2 = locale === "tr" ? "Oto Kurtarma" : "Auto Recovery";
+  const coverage = "Hınıs · Bulanık · Karlıova · D300";
 
   return new ImageResponse(
     (
@@ -35,83 +30,94 @@ export default async function OpengraphImage({
           height: "100%",
           display: "flex",
           background: "linear-gradient(135deg, #0F1115 0%, #1A1D24 100%)",
-          padding: 80,
+          padding: 64,
           position: "relative",
           fontFamily: "sans-serif",
         }}
       >
-        {/* Soft lime glow upper-left */}
+        {/* Lime glow upper-left */}
         <div
           style={{
             position: "absolute",
-            top: -240,
-            left: -100,
-            width: 800,
-            height: 800,
+            top: -260,
+            left: -120,
+            width: 760,
+            height: 760,
             borderRadius: "50%",
             background:
               "radial-gradient(circle, rgba(163,230,53,0.20) 0%, transparent 70%)",
           }}
         />
-        {/* Hi-vis stripe at bottom */}
+        {/* Hi-vis stripe */}
         <div
           style={{
             position: "absolute",
             left: -100,
             right: -100,
-            bottom: 32,
-            height: 22,
+            bottom: 40,
+            height: 24,
             background: "#A3E635",
             opacity: 0.18,
             transform: "rotate(-1.5deg)",
           }}
         />
 
-        {/* Left column — 7/24 mark */}
+        {/* Left: 7/24 mark */}
         <div
           style={{
             display: "flex",
-            alignItems: "center",
+            flexDirection: "column",
             justifyContent: "center",
-            width: 520,
+            paddingRight: 40,
             position: "relative",
           }}
         >
           <div
             style={{
               display: "flex",
-              alignItems: "center",
+              alignItems: "baseline",
               fontFamily: "'Helvetica Neue', 'Arial Black', sans-serif",
               fontWeight: 900,
-              fontSize: 320,
+              fontSize: 240,
               color: "#A3E635",
               lineHeight: 0.9,
-              letterSpacing: -12,
+              letterSpacing: -10,
             }}
           >
             <span>7</span>
             <div
               style={{
-                width: 22,
-                height: 320,
+                width: 18,
+                height: 240,
                 background: "#A3E635",
-                margin: "0 -10px",
-                transform: "skewX(-22deg) translateY(-14px)",
+                margin: "0 -2px",
+                transform: "skewX(-22deg) translateY(-8px)",
                 borderRadius: 4,
               }}
             />
             <span>24</span>
           </div>
+          <div
+            style={{
+              marginTop: 12,
+              color: "#FAFAFA",
+              fontSize: 22,
+              fontWeight: 800,
+              letterSpacing: 6,
+            }}
+          >
+            VARTO ÇEKİCİ
+          </div>
         </div>
 
-        {/* Right column — wordmark + phone CTA */}
+        {/* Right column: brand info + phone */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            marginLeft: 48,
             justifyContent: "center",
             flex: 1,
+            marginLeft: 32,
           }}
         >
           {/* Kicker */}
@@ -130,40 +136,41 @@ export default async function OpengraphImage({
             {kicker}
           </div>
 
-          {/* Brand name */}
+          {/* Headline */}
           <div
             style={{
-              marginTop: 18,
+              marginTop: 22,
               color: "#FAFAFA",
-              fontSize: 84,
+              fontSize: 72,
               fontWeight: 900,
-              letterSpacing: -2,
-              lineHeight: 1,
+              letterSpacing: -1.5,
+              lineHeight: 0.95,
             }}
           >
-            VARTO ÇEKİCİ
+            {headline1}
+          </div>
+          <div
+            style={{
+              color: "#FAFAFA",
+              fontSize: 72,
+              fontWeight: 900,
+              letterSpacing: -1.5,
+              lineHeight: 0.95,
+            }}
+          >
+            {headline2}
           </div>
 
           {/* Coverage */}
           <div
             style={{
               marginTop: 24,
-              color: "#D4D4D8",
-              fontSize: 28,
+              color: "#A1A1AA",
+              fontSize: 24,
               fontWeight: 500,
             }}
           >
             {coverage}
-          </div>
-          <div
-            style={{
-              marginTop: 6,
-              color: "#A1A1AA",
-              fontSize: 22,
-              fontWeight: 500,
-            }}
-          >
-            {services}
           </div>
 
           {/* Phone CTA */}
@@ -171,12 +178,12 @@ export default async function OpengraphImage({
             style={{
               display: "flex",
               alignItems: "center",
-              marginTop: 36,
+              marginTop: 32,
               background: "#A3E635",
               color: "#0F1115",
-              padding: "22px 36px",
+              padding: "20px 34px",
               borderRadius: 16,
-              fontSize: 42,
+              fontSize: 40,
               fontWeight: 900,
               letterSpacing: 0.5,
               alignSelf: "flex-start",
@@ -189,7 +196,7 @@ export default async function OpengraphImage({
           {/* Domain */}
           <div
             style={{
-              marginTop: 26,
+              marginTop: 22,
               color: "#71717A",
               fontSize: 18,
               fontWeight: 700,
