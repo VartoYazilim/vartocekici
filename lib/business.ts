@@ -45,8 +45,9 @@ export const business = {
     latitude: 39.1772,
     longitude: 41.4533,
     // Effective service radius in kilometers — used in JSON-LD GeoCircle.
-    // Covers all named serviceAreas (furthest is Karlıova ~95 km) with a small margin.
-    serviceRadiusKm: 100,
+    // Covers all named serviceAreas plus wider region (Erzurum, Bingöl,
+    // Tatvan, Erzincan, Van merkez tarafı dahil).
+    serviceRadiusKm: 250,
   },
   serviceAreas: [
     "Varto",
