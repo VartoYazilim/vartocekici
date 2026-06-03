@@ -1,12 +1,20 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Phone, MessageCircle } from "lucide-react";
 import { business, telHref, whatsappHref } from "@/lib/business";
 
 export function Hero({ locale }: { locale: "tr" | "en" }) {
   const t = useTranslations("hero");
+  const altText =
+    locale === "tr"
+      ? "Varto Çekici — şehir dışı çekme, karayolu"
+      : "Varto Çekici — intercity towing on the highway";
 
   return (
-    <section id="top" className="relative isolate overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-32">
+    <section
+      id="top"
+      className="relative isolate overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-32"
+    >
       {/* Background grid */}
       <div className="absolute inset-0 -z-10 bg-grid" aria-hidden="true" />
       {/* Radial glow */}
@@ -20,7 +28,8 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          {/* LEFT: text + CTA */}
           <div className="max-w-2xl">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-ink-50">
               {t("title")}
@@ -54,180 +63,51 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
                 <span>{t("whatsappCta")}</span>
               </a>
             </div>
-
           </div>
 
-          {/* Decorative visual */}
-          <div className="relative hidden lg:block w-[420px] xl:w-[480px] shrink-0">
-            <HeroVisual />
+          {/* RIGHT: real photo (intercity towing) */}
+          <div className="relative w-full lg:w-[460px] xl:w-[520px] shrink-0">
+            <div className="relative overflow-hidden rounded-2xl border border-ink-800 shadow-2xl aspect-[4/3]">
+              <Image
+                src="/galeri/01-karayolu-otomobil.jpg"
+                alt={altText}
+                fill
+                priority
+                sizes="(max-width: 1023px) 100vw, 520px"
+                className="object-cover"
+              />
+              {/* Carbon overlay for brand cohesion + text readability if overlaid later */}
+              <div
+                className="absolute inset-0 mix-blend-multiply"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(15,17,21,0.15) 0%, rgba(15,17,21,0.55) 100%)",
+                }}
+                aria-hidden="true"
+              />
+              {/* Lime accent wash, top-left */}
+              <div
+                className="absolute inset-0 opacity-25 mix-blend-overlay"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at top left, #A3E635 0%, transparent 55%)",
+                }}
+                aria-hidden="true"
+              />
+              {/* Hi-vis diagonal stripe accent (bottom right corner) */}
+              <div
+                className="absolute -bottom-4 -right-4 h-16 w-40 opacity-90"
+                style={{
+                  background:
+                    "repeating-linear-gradient(135deg, #A3E635 0 14px, #0F1115 14px 28px)",
+                  transform: "rotate(-6deg)",
+                }}
+                aria-hidden="true"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function HeroVisual() {
-  return (
-    <svg
-      viewBox="0 0 480 480"
-      className="w-full h-auto drop-shadow-2xl"
-      role="img"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="heroVisualBg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#27272A" />
-          <stop offset="100%" stopColor="#18181B" />
-        </linearGradient>
-        <radialGradient id="heroVisualGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#A3E635" stopOpacity="0.35" />
-          <stop offset="100%" stopColor="#A3E635" stopOpacity="0" />
-        </radialGradient>
-        <pattern id="heroVisualGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M20 0 L0 0 0 20" fill="none" stroke="#27272A" strokeWidth="0.5" opacity="0.6"/>
-        </pattern>
-      </defs>
-
-      {/* Outer glow */}
-      <circle cx="240" cy="240" r="220" fill="url(#heroVisualGlow)" />
-
-      {/* Dashed outer ring */}
-      <circle
-        cx="240"
-        cy="240"
-        r="180"
-        fill="none"
-        stroke="#3F3F46"
-        strokeWidth="1"
-        strokeDasharray="2 6"
-      />
-
-      {/* Inner badge */}
-      <circle
-        cx="240"
-        cy="240"
-        r="140"
-        fill="url(#heroVisualBg)"
-        stroke="#3F3F46"
-        strokeWidth="1"
-      />
-      <circle
-        cx="240"
-        cy="240"
-        r="140"
-        fill="url(#heroVisualGrid)"
-        opacity="0.5"
-      />
-
-      {/* "7/24" numeric mark at center */}
-      <g>
-        <text
-          x="172"
-          y="266"
-          fontFamily="'Arial Black', 'Helvetica Neue', sans-serif"
-          fontSize="98"
-          fontWeight="900"
-          fill="#A3E635"
-          letterSpacing="-4"
-        >
-          7
-        </text>
-        <line
-          x1="216"
-          y1="284"
-          x2="244"
-          y2="186"
-          stroke="#A3E635"
-          strokeWidth="7"
-          strokeLinecap="round"
-        />
-        <text
-          x="236"
-          y="266"
-          fontFamily="'Arial Black', 'Helvetica Neue', sans-serif"
-          fontSize="98"
-          fontWeight="900"
-          fill="#A3E635"
-          letterSpacing="-4"
-        >
-          24
-        </text>
-        <text
-          x="240"
-          y="306"
-          textAnchor="middle"
-          fontFamily="ui-sans-serif, system-ui, sans-serif"
-          fontSize="11"
-          fontWeight="800"
-          fill="#FAFAFA"
-          letterSpacing="3.5"
-        >
-          VARTO ÇEKİCİ
-        </text>
-      </g>
-
-      {/* Orbital tags */}
-      <g>
-        <OrbitalTag cx={240} cy={60} label="VARTO" />
-        <OrbitalTag cx={420} cy={240} label="HINIS" />
-        <OrbitalTag cx={240} cy={420} label="MUŞ" />
-        <OrbitalTag cx={60} cy={240} label="D300" />
-      </g>
-
-      {/* Pulse ring */}
-      <circle
-        cx="240"
-        cy="240"
-        r="200"
-        fill="none"
-        stroke="#A3E635"
-        strokeWidth="2"
-        opacity="0.25"
-      >
-        <animate
-          attributeName="r"
-          values="200;230;200"
-          dur="3s"
-          repeatCount="indefinite"
-        />
-        <animate
-          attributeName="opacity"
-          values="0.4;0;0.4"
-          dur="3s"
-          repeatCount="indefinite"
-        />
-      </circle>
-    </svg>
-  );
-}
-
-function OrbitalTag({ cx, cy, label }: { cx: number; cy: number; label: string }) {
-  const textW = label.length * 9 + 20;
-  return (
-    <g>
-      <rect
-        x={cx - textW / 2}
-        y={cy - 14}
-        width={textW}
-        height={28}
-        rx={14}
-        fill="#18181B"
-        stroke="#3F3F46"
-        strokeWidth="1"
-      />
-      <text
-        x={cx}
-        y={cy + 5}
-        textAnchor="middle"
-        fontSize="13"
-        fontWeight="700"
-        fill="#BEF264"
-        fontFamily="ui-monospace, monospace"
-        letterSpacing="1.5"
-      >
-        {label}
-      </text>
-    </g>
   );
 }
