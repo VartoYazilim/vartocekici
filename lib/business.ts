@@ -63,6 +63,12 @@ export const business = {
   founded: 2024,
 } as const;
 
+/** Developer/agency credit shown in the footer. */
+export const developer = {
+  name: "Varto Yazılım",
+  url: "https://vartoyazilim.com",
+} as const;
+
 /**
  * Gallery placeholder images.
  *

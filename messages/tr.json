@@ -126,7 +126,8 @@
     "legal": "Yasal",
     "kvkk": "KVKK Aydınlatma Metni",
     "cookies": "Çerez Politikası",
-    "rights": "Tüm hakları saklıdır."
+    "rights": "Tüm hakları saklıdır.",
+    "builtBy": "<link>Varto Yazılım</link> tarafından geliştirilmiştir."
   },
   "floatingCta": {
     "call": "Ara",

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Phone, MessageCircle, Mail, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 import { LegalModal } from "./LegalModal";
-import { business, telHref } from "@/lib/business";
+import { business, developer, telHref } from "@/lib/business";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -129,9 +129,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-ink-800/70 pt-6 text-xs text-ink-500">
+        <div className="mt-12 border-t border-ink-800/70 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-ink-500">
           <p>
             © {year} {business.legalName}. {t("rights")}
+          </p>
+          <p>
+            {t.rich("builtBy", {
+              link: (chunks) => (
+                <a
+                  href={developer.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-ink-300 hover:text-brand-400 underline-offset-4 hover:underline transition"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
           </p>
         </div>
       </div>

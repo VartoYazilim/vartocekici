@@ -126,7 +126,8 @@
     "legal": "Legal",
     "kvkk": "Privacy Notice (KVKK)",
     "cookies": "Cookie Policy",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "builtBy": "Developed by <link>Varto Yazılım</link>."
   },
   "floatingCta": {
     "call": "Call",
