@@ -44,6 +44,9 @@ export const business = {
     // location is pinned and we have the precise coordinates.
     latitude: 39.1772,
     longitude: 41.4533,
+    // Effective service radius in kilometers — used in JSON-LD GeoCircle.
+    // Covers all named serviceAreas (furthest is Karlıova ~95 km) with a small margin.
+    serviceRadiusKm: 100,
   },
   serviceAreas: [
     "Varto",

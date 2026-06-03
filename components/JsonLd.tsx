@@ -88,10 +88,25 @@ export function JsonLd({ locale }: { locale: "tr" | "en" }) {
             closes: "23:59",
           },
         ],
-        areaServed: business.serviceAreas.map((name) => ({
-          "@type": "City",
-          name,
-        })),
+        // Mix of named cities + a geographic circle. The named entries are
+        // the strongest signal for Google's local pack; the GeoCircle catches
+        // long-tail queries from points within radius that aren't named.
+        areaServed: [
+          ...business.serviceAreas.map((name) => ({
+            "@type": "City",
+            name,
+          })),
+          {
+            "@type": "GeoCircle",
+            geoMidpoint: {
+              "@type": "GeoCoordinates",
+              latitude: business.geo.latitude,
+              longitude: business.geo.longitude,
+            },
+            // Schema.org expects geoRadius in meters when no unit suffix is set.
+            geoRadius: business.geo.serviceRadiusKm * 1000,
+          },
+        ],
         sameAs: [business.social.instagram.url],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
