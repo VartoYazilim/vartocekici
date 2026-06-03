@@ -76,34 +76,6 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
                 sizes="(max-width: 1023px) 100vw, 520px"
                 className="object-cover"
               />
-              {/* Carbon overlay for brand cohesion + text readability if overlaid later */}
-              <div
-                className="absolute inset-0 mix-blend-multiply"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(15,17,21,0.15) 0%, rgba(15,17,21,0.55) 100%)",
-                }}
-                aria-hidden="true"
-              />
-              {/* Lime accent wash, top-left */}
-              <div
-                className="absolute inset-0 opacity-25 mix-blend-overlay"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at top left, #A3E635 0%, transparent 55%)",
-                }}
-                aria-hidden="true"
-              />
-              {/* Hi-vis diagonal stripe accent (bottom right corner) */}
-              <div
-                className="absolute -bottom-4 -right-4 h-16 w-40 opacity-90"
-                style={{
-                  background:
-                    "repeating-linear-gradient(135deg, #A3E635 0 14px, #0F1115 14px 28px)",
-                  transform: "rotate(-6deg)",
-                }}
-                aria-hidden="true"
-              />
             </div>
           </div>
         </div>
