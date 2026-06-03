@@ -2,17 +2,18 @@
 
 7/24 yol yardım ve oto kurtarma — Muş Varto ve çevre bölge.
 
-Tek-sayfa, SEO odaklı, Türkçe + İngilizce, Vercel üzerinde yayınlanacak Next.js 15 sitesi.
+Tek-sayfa, SEO odaklı, Türkçe + İngilizce, Vercel üzerinde yayınlanan Next.js sitesi.
 
 ## Teknoloji
 
-- **Next.js 15** (App Router, SSG)
+- **Next.js 16** (App Router, SSG, "proxy" middleware convention)
 - **React 19**
 - **TypeScript** (strict)
-- **Tailwind CSS v4** (`@theme` ile token sistemi)
-- **next-intl** (TR varsayılan, EN ikincil)
+- **Tailwind CSS v4** (`@theme` ile token sistemi — Carbon + Lime paleti)
+- **next-intl 4** (TR varsayılan, EN ikincil)
 - **@vercel/analytics** + **@vercel/speed-insights**
 - **lucide-react** (ikonlar)
+- **ESLint 9** (flat config, eslint-config-next 16 native)
 
 ## Çalıştırma
 
@@ -29,8 +30,9 @@ npm run dev
 # → http://localhost:3000  (TR)
 # → http://localhost:3000/en  (EN)
 
-# 4. tip kontrolü
+# 4. tip kontrolü + lint
 npm run typecheck
+npm run lint
 
 # 5. prod build
 npm run build
@@ -41,151 +43,156 @@ npm run start
 
 ```
 app/
-├── layout.tsx              # pass-through (Next.js gereği)
-├── icon.svg                # favicon
-├── apple-icon.svg
-├── globals.css             # Tailwind v4 + token tanımları
+├── layout.tsx              # pass-through (Next.js root layout gereği)
+├── icon.svg                # favicon ("7/24" stacked diagonal)
+├── apple-icon.svg          # apple touch icon (180×180)
+├── globals.css             # Tailwind v4 + Carbon Lime token tanımları
 ├── robots.ts
-├── sitemap.ts
+├── sitemap.ts              # stable lastModified, hreflang alternates
 └── [locale]/
     ├── layout.tsx          # asıl <html>, metadata, font, Analytics
     ├── page.tsx            # tek sayfa — bütün section'lar
-    └── opengraph-image.tsx # PNG OG üretici (1200x630)
+    └── opengraph-image.tsx # dinamik PNG OG üretici (1200×630)
 
 components/
-├── Header.tsx              # sticky, mobile menu, lang switch
-├── Hero.tsx                # H1 + CTA + dekoratif SVG
+├── Header.tsx              # sticky, mobile menü, dil switcher
+├── Hero.tsx                # H1 + CTA + dekoratif SVG (orbital tags)
 ├── Services.tsx            # 8 hizmet kartı
-├── ServiceArea.tsx         # bölge listesi + Maps embed
-├── About.tsx               # 4 değer önerisi
-├── Contact.tsx             # tel, WhatsApp, e-posta, Instagram, saat, adres
-├── Footer.tsx              # quick links + legal modal tetikleyiciler
-├── FloatingCTA.tsx         # mobile alt sabit "Ara / WhatsApp"
-├── LegalModal.tsx          # KVKK + Çerez modali (Esc, focus-trap, scroll-lock)
-├── LanguageSwitcher.tsx    # TR / EN toggle
-├── Logo.tsx                # SVG mark + wordmark
-└── JsonLd.tsx              # Schema.org AutomotiveBusiness
+├── Gallery.tsx              # 5 gerçek araç fotoğrafı (auto-detect)
+├── ServiceArea.tsx          # bölge listesi + Google Maps embed
+├── About.tsx                # 4 değer önerisi
+├── Contact.tsx              # tel, WhatsApp, e-posta, Instagram, saat, adres
+├── Footer.tsx               # quick links + legal modal + Varto Yazılım credit
+├── FloatingCTA.tsx          # mobile alt sabit "Ara / WhatsApp"
+├── LegalModal.tsx           # KVKK + Çerez modal (Esc, focus-trap, scroll-lock)
+├── LanguageSwitcher.tsx     # TR / EN toggle (next-intl router)
+├── Logo.tsx                 # "7/24" Anton numerik mark + mono wordmark
+└── JsonLd.tsx               # Schema.org AutomotiveBusiness + image array
 
 i18n/
 ├── routing.ts              # locales, default, prefix mode
-└── request.ts              # mesaj yükleme
+├── request.ts              # mesaj yükleme
+└── navigation.ts           # createNavigation — useRouter/usePathname (locale-aware)
 
 messages/
 ├── tr.json
 └── en.json
 
 lib/
-└── business.ts             # tek doğru kaynak: tel, adres, hizmet bölgeleri
-                             #   buradaki değer her yere yansır
+├── business.ts             # işletme bilgisi (tel, adres, geo, sosyal, developer)
+└── gallery.ts              # public/galeri/ tarayan server-only modül
 
-proxy.ts                     # next-intl locale routing (Next 16 "proxy" convention)
 public/
-├── logo-mark.svg
+├── galeri/                  # gerçek araç fotoğrafları (auto-detect)
+├── logo-mark.svg           # JSON-LD logo URL'i için
 ├── logo-lockup.svg
-└── og-image.svg            # statik fallback (PNG, opengraph-image.tsx'tan üretilir)
+└── og-image.svg            # OG fallback (PNG opengraph-image.tsx'tan üretilir)
+
+proxy.ts                    # next-intl locale routing (Next 16 "proxy" convention)
+eslint.config.mjs           # ESLint 9 flat config
 ```
 
 ## İçeriği değiştirmek
 
-İşletme bilgileri (telefon, adres, hizmet bölgeleri) `lib/business.ts` içinde toplandı. **Buradaki değişiklik header, hero, contact, footer, JSON-LD, sitemap — her yere yansır.**
+### İşletme bilgileri (telefon, adres, vb.)
+`lib/business.ts` — buradaki değişiklik header, hero, contact, footer, JSON-LD, sitemap, OG image, her yere yansır.
 
-Metin içerikleri:
+### Metinler (başlık, açıklama, hizmet adları)
 - Türkçe → `messages/tr.json`
 - İngilizce → `messages/en.json`
+
+### Galeri fotoğrafları
+`public/galeri/` klasörüne dosya (jpg/png/webp/avif) at — `lib/gallery.ts` otomatik tarar, alfabetik (numeric-aware) sıralar, galeri bölümüne ekler. Caption'lar `messages/{locale}.json` → `gallery.items` array'inden gelir (index sırası).
+
+Placeholder devre dışı kalır: gerçek dosya varsa picsum URL'leri kullanılmaz; "Demo görseller" bilgi notu otomatik gizlenir.
+
+### Sitemap "lastModified"
+`app/sitemap.ts` içinde `CONTENT_LAST_MODIFIED` sabiti var — içerik anlamlı değiştiğinde elle bump et. `new Date()` kullanmamamızın sebebi: her build'de tüm sayfaları "yeni güncellendi" diye Google'a yanlış sinyal vermemek.
 
 ## Vercel'e deploy
 
 ```bash
-# 1. GitHub'a push et (zaten bir repo: VartoYazilim/vartocekici)
 git add .
-git commit -m "feat: ilk yayın - varto cekici v1"
+git commit -m "feat: ..."
 git push
 
-# 2. vercel.com → New Project → repoyu import et
-#    Framework Preset: Next.js (otomatik algılar)
-#    Build: npm run build
-#    Output: .next (otomatik)
+# vercel.com → New Project → repoyu import et
+# Framework Preset: Next.js (otomatik)
 ```
 
-### Vercel ortam değişkenleri (Project → Settings → Environment Variables)
+### Vercel ortam değişkenleri
 
 | Anahtar | Değer | Zorunlu? |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | `https://vartocekici.com` | ✅ Evet |
-| `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console doğrulama token'ı | İsteğe bağlı |
-| `NEXT_PUBLIC_MAPS_QUERY` | GBP pin'i oluştuğunda Maps embed query'si | İsteğe bağlı |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | (DNS doğrulama kullanılıyorsa boş bırak) | İsteğe bağlı |
+| `NEXT_PUBLIC_MAPS_QUERY` | GBP pin oluştuğunda Maps embed query'si | İsteğe bağlı |
 
-### Domain bağlama
+### Domain
 
-Vercel → Project → Settings → Domains → `vartocekici.com` ekle. DNS kayıtlarını Vercel'in gösterdiği gibi (A `76.76.21.21` veya CNAME) ayarla.
+- `vartocekici.com` apex → primary (canonical)
+- `www.vartocekici.com` → 308 → apex
 
 ## Deploy sonrası kontrol listesi 📋
 
-Sıralı olarak yap:
-
-1. **Google Search Console** (kritik — yerel SEO'nun temeli)
-   - https://search.google.com/search-console adresine git
-   - `vartocekici.com` mülkünü ekle
-   - "URL prefix" yöntemini seç → doğrulama tag'ini al
-   - Token'ı `NEXT_PUBLIC_GSC_VERIFICATION` ortam değişkenine koy ve yeniden deploy et
+1. **Google Search Console** (yerel SEO temeli)
+   - DNS TXT ile doğrulandı (domain property, tüm subdomain'leri kapsar)
    - **Sitemap gönder**: `https://vartocekici.com/sitemap.xml`
+   - URL Inspection → `/` ve `/en` için "Request Indexing"
 
-2. **Google Business Profile** (yerel aramaların %70'i buradan gelir — bunu yapmazsak SEO yarım kalır)
-   - https://www.google.com/business adresinden açın
+2. **Google Business Profile** (yerel aramaların %70'i buradan)
+   - https://www.google.com/business
    - Adres: `Erzurum Caddesi, Varto / Muş`
-   - Kategori: **"Çekici Hizmeti"** (Tow truck service)
+   - Kategori: **Çekici Hizmeti** (Tow truck service)
    - Hizmet alanları: Varto, Hınıs, Muş, Bulanık, Karlıova
-   - Telefon: `0 553 181 57 91`
-   - Çalışma saatleri: **7 gün 24 saat**
+   - Telefon: `0 553 181 57 91` (tek)
+   - Çalışma saatleri: 7/24
    - Web sitesi: `https://vartocekici.com`
-   - Fotoğraf yükle (logo + araç fotoğrafları gelince mutlaka ekle)
-   - Doğrulama posta kartını isteyin ve tamamlayın
+   - Fotoğraf yükle (`public/galeri/` içindekiler GBP'ye de eklenmeli)
 
-3. **Bing Webmaster Tools** (5 dakikalık iş, ek trafik kanalı)
-   - https://www.bing.com/webmasters → site ekle → sitemap gönder
+3. **GBP doğrulandıktan sonra**
+   - `lib/business.ts` → `geo.latitude/longitude` gerçek koordinatlarla güncelle
+   - `NEXT_PUBLIC_MAPS_QUERY` ortam değişkenini GBP `place_id` veya `Varto+Çekici` ile doldur
+   - Redeploy → Maps embed gerçek pin'i gösterecek
 
-4. **Google Maps konum güncelleme**
-   - GBP doğrulandıktan sonra `lib/business.ts` içindeki `geo.latitude` ve `geo.longitude` değerlerini Maps'in verdiği gerçek koordinatlarla güncelle
-   - `NEXT_PUBLIC_MAPS_QUERY` ortam değişkenini `Varto+Çekici` veya GBP'nin `place_id`'si ile doldur
-   - Yeniden deploy et — Maps embed gerçek pin'i gösterecek
+4. **Bing Webmaster Tools** (5 dk, ek trafik kanalı)
 
-5. **Sosyal medya bio güncelle**
-   - Instagram bio'ya `vartocekici.com` ekle (linkin geri yansıması SEO'ya yardım eder)
-
-6. **Lighthouse ve PageSpeed**
+5. **Lighthouse / PageSpeed**
    - https://pagespeed.web.dev/?url=https://vartocekici.com
-   - Hedef: Performance / SEO / Best Practices / Accessibility hepsi 95+
+   - Hedef: Performance / SEO / Best Practices / Accessibility — 95+
 
 ## SEO mimari özeti
 
-- **LocalBusiness + AutomotiveBusiness** JSON-LD (her sayfa)
+- **AutomotiveBusiness** JSON-LD (her sayfa, hem TR hem EN)
+- `image` array içinde **OG + tüm gerçek galeri fotoğrafları** (placeholder filtrelenir)
 - **OfferCatalog** içinde tüm hizmetler tek tek listeleniyor
 - **areaServed** ile her hizmet bölgesi `City` olarak işaretli
-- Türkçe + İngilizce için **hreflang** alternates
-- Otomatik `sitemap.xml` ve `robots.txt`
-- **OG image** her dil için ayrı dinamik PNG (1200×630)
-- **Geist tabanlı Inter Tight + Inter** ile self-hosted font (CLS = 0)
+- TR + EN için **hreflang** alternates
+- Otomatik `sitemap.xml` + `robots.txt`, stable lastModified
+- Dil başına dinamik **OG image PNG** (1200×630, `next/og`)
+- Inter + Inter Tight + Anton + JetBrains Mono — hepsi `next/font/google` ile self-hosted (CLS = 0)
 - Statik prerender (`generateStaticParams`) — TTFB minimum
-- Server-side rendering ile JS bundle ufak — `lucide-react` tree-shake'li
+- `lucide-react` tree-shake'li, server components, client-side JS minimum
+
+## Erişilebilirlik (a11y)
+
+- Tek H1, semantik H2'ler her section için
+- Mobil menüde `aria-expanded` + `aria-controls`
+- LegalModal: **gerçek focus-trap** (Tab + Shift+Tab wrap), Escape kapatır, body scroll-lock, açılışta close button'a focus, kapanışta önceki focus'a dönüş
+- `focus-visible` outline (lime)
+- `prefers-reduced-motion` desteği
+- Tüm CTA butonları minimum 44×44 px tap target
 
 ## Yerel SEO için anahtar kelime stratejisi
 
-Site otomatik olarak şu kelimelerde sıralanacak (zaman içinde):
+**Ana hedefler:** Varto çekici · Muş Varto çekici · Varto oto kurtarma · Varto yol yardım
 
-**Ana hedefler:**
-- Varto çekici
-- Muş Varto çekici
-- Varto oto kurtarma
-- Varto yol yardım
+**Uzun kuyruk:** 7/24 çekici Muş Varto · Hınıs çekici hizmeti · Erzurum Muş karayolu çekici · Off road kurtarma Varto
 
-**Uzun kuyruk:**
-- 7/24 çekici Muş Varto
-- Hınıs çekici hizmeti
-- Erzurum Muş karayolu çekici
-- Off road kurtarma Varto
-
-GBP + GSC bağlandığında ve birkaç organik trafik geldiğinde rankings stabilize olur (4-8 hafta).
+GBP + GSC aktif olduğunda ve birkaç organik trafik geldiğinde rankings stabilize olur (4-8 hafta).
 
 ## Lisans
 
 İşletmeye özel proje. Tüm hakları Varto Çekici'ye aittir.
+
+Geliştirme: [Varto Yazılım](https://vartoyazilim.com)

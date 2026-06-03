@@ -30,25 +30,72 @@ export function LegalModal({
     }
   }, [open]);
 
-  // Escape closes
+  // Keep focus inside the dialog (Tab / Shift+Tab wrap) + Escape closes.
+  // This is a real focus-trap, not just initial focus — required for WCAG 2.1.
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+    const dialog = dialogRef.current;
+
+    const getFocusables = (): HTMLElement[] => {
+      if (!dialog) return [];
+      return Array.from(
+        dialog.querySelectorAll<HTMLElement>(
+          'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter(
+        (el) =>
+          !el.hasAttribute("disabled") &&
+          el.getAttribute("aria-hidden") !== "true" &&
+          el.offsetParent !== null,
+      );
     };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const focusables = getFocusables();
+      if (focusables.length === 0) {
+        e.preventDefault();
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+
+      if (e.shiftKey) {
+        if (active === first || !dialog?.contains(active)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (active === last || !dialog?.contains(active)) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, onClose]);
 
-  // Initial focus on the close button when opening
+  // Initial focus on the close button when opening; remember the previously
+  // focused element so we can restore focus after closing.
   useEffect(() => {
-    if (open) {
-      requestAnimationFrame(() => {
-        dialogRef.current?.querySelector<HTMLButtonElement>(
-          "[data-autofocus]"
-        )?.focus();
-      });
-    }
+    if (!open) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    requestAnimationFrame(() => {
+      dialogRef.current
+        ?.querySelector<HTMLButtonElement>("[data-autofocus]")
+        ?.focus();
+    });
+    return () => {
+      previouslyFocused?.focus?.();
+    };
   }, [open, kind]);
 
   if (!open || !kind) return null;

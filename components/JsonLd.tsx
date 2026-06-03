@@ -1,4 +1,5 @@
 import { business, SITE_URL } from "@/lib/business";
+import { galleryImages } from "@/lib/gallery";
 
 const localizedServices = {
   tr: [
@@ -44,7 +45,15 @@ export function JsonLd({ locale }: { locale: "tr" | "en" }) {
         description,
         telephone: business.phone.e164,
         email: business.email,
-        image: `${SITE_URL}/og-image.svg`,
+        // Image array — OG + real gallery photos (placeholder picsum URLs filtered out)
+        image: [
+          `${SITE_URL}/og-image.svg`,
+          ...galleryImages
+            .filter((img) => !img.isPlaceholder)
+            .map((img) =>
+              img.src.startsWith("http") ? img.src : `${SITE_URL}${img.src}`,
+            ),
+        ],
         logo: `${SITE_URL}/logo-mark.svg`,
         priceRange: "$$",
         currenciesAccepted: "TRY",
