@@ -69,24 +69,7 @@ export const developer = {
   url: "https://vartoyazilim.com",
 } as const;
 
-/**
- * Gallery placeholder images.
- *
- * SWAP THESE for real photos as they come in:
- *   1. Drop photos into `public/galeri/01.jpg` ... `06.jpg`
- *   2. Change each `src` here to `/galeri/01.jpg` etc.
- *   3. Remove `picsum.photos` from `next.config.ts` → `images.remotePatterns`
- *
- * Captions are read from `messages/{locale}.json` → `gallery.items[i]`.
- */
-export const galleryImages: { src: string; width: number; height: number }[] = [
-  { src: "https://picsum.photos/seed/varto-cekici-1/1200/900", width: 1200, height: 900 },
-  { src: "https://picsum.photos/seed/varto-cekici-2/1200/900", width: 1200, height: 900 },
-  { src: "https://picsum.photos/seed/varto-cekici-3/1200/900", width: 1200, height: 900 },
-  { src: "https://picsum.photos/seed/varto-cekici-4/1200/900", width: 1200, height: 900 },
-  { src: "https://picsum.photos/seed/varto-cekici-5/1200/900", width: 1200, height: 900 },
-  { src: "https://picsum.photos/seed/varto-cekici-6/1200/900", width: 1200, height: 900 },
-];
+// Gallery images are now auto-detected from `public/galeri/` by `lib/gallery.ts`.
 
 export const telHref = `tel:${business.phone.e164}`;
 

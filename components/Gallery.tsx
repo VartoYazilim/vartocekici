@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Info } from "lucide-react";
-import { galleryImages } from "@/lib/business";
+import { galleryImages, isUsingPlaceholders } from "@/lib/gallery";
 
 export function Gallery() {
   const t = useTranslations("gallery");
@@ -19,21 +19,23 @@ export function Gallery() {
             <h2 className="section-title mt-4">{t("title")}</h2>
             <p className="section-subtitle">{t("subtitle")}</p>
           </div>
-          <p className="inline-flex items-center gap-2 text-xs text-ink-500 sm:max-w-sm">
-            <Info size={14} className="shrink-0" />
-            <span>{t("note")}</span>
-          </p>
+          {isUsingPlaceholders && (
+            <p className="inline-flex items-center gap-2 text-xs text-ink-500 sm:max-w-sm">
+              <Info size={14} className="shrink-0" />
+              <span>{t("note")}</span>
+            </p>
+          )}
         </div>
 
         <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {galleryImages.map((img, i) => (
             <li
-              key={i}
+              key={img.src}
               className="group relative overflow-hidden rounded-xl border border-ink-800 bg-ink-900 aspect-[4/3]"
             >
               <Image
                 src={img.src}
-                alt={captions[i] ?? ""}
+                alt={captions[i] ?? `Varto Çekici — ${i + 1}`}
                 width={img.width}
                 height={img.height}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -67,7 +69,7 @@ export function Gallery() {
                   </span>
                 </div>
                 <h3 className="mt-1.5 font-display text-base sm:text-lg font-bold text-ink-50">
-                  {captions[i]}
+                  {captions[i] ?? ""}
                 </h3>
               </div>
             </li>
