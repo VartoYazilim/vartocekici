@@ -22,16 +22,7 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
-            {/* Status badge with live pulse */}
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-500/40 bg-brand-500/10 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-brand-300 font-mono uppercase tracking-wider">
-              <span className="relative inline-flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-70 animate-ping-soft" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-400 animate-pulse-soft" />
-              </span>
-              {t("badge")}
-            </span>
-
-            <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-ink-50">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-ink-50">
               {t("title")}
             </h1>
 
