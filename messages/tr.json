@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Varto Çekici | 7/24 Yol Yardım ve Oto Kurtarma — Muş Varto",
-    "description": "Varto, Hınıs, Muş ve civar bölgelerde 7 gün 24 saat çekici, oto kurtarma ve yol yardım hizmeti. Hemen arayın: 0 553 181 57 91. Şehir içi/dışı, off-road, akü, lastik, yakıt, kilit hizmetleri.",
-    "keywords": "Varto çekici, Muş çekici, Varto oto kurtarma, Hınıs çekici, Varto yol yardım, Muş Varto çekici, oto kurtarma Varto, 7/24 çekici Muş, off road kurtarma Varto, Erzurum Muş karayolu çekici"
+    "title": "Varto Çekici | Karlıova, Hınıs, Muş 7/24 Oto Kurtarma & Yol Yardım",
+    "description": "Varto, Karlıova, Hınıs, Muş ve çevresinde 7 gün 24 saat çekici, oto kurtarma ve yol yardım hizmeti. Karlıova ve Varto'da hızlı müdahale. Hemen arayın: 0 553 181 57 91. Şehir içi/dışı, off-road, akü, lastik, yakıt, kilit.",
+    "keywords": "Varto çekici, Karlıova çekici, Karlıova oto kurtarma, Karlıova yol yardım, Bingöl Karlıova çekici, Varto Karlıova çekici, Muş çekici, Varto oto kurtarma, Hınıs çekici, Varto yol yardım, 7/24 çekici Karlıova, off road kurtarma Varto Karlıova, Erzurum Muş karayolu çekici"
   },
   "nav": {
     "services": "Hizmetler",
@@ -14,7 +14,7 @@
   },
   "hero": {
     "title": "Yolda mı Kaldınız? Hemen Arayın.",
-    "subtitle": "Varto, Hınıs, Muş ve çevresinde 7/24 çekici, oto kurtarma ve yol yardım hizmeti.",
+    "subtitle": "Varto, Karlıova, Hınıs, Muş ve çevresinde 7/24 çekici, oto kurtarma ve yol yardım hizmeti.",
     "callCta": "Hemen Ara",
     "whatsappCta": "WhatsApp"
   },
@@ -73,7 +73,7 @@
   "area": {
     "kicker": "Bölge",
     "title": "Hizmet Bölgemiz",
-    "subtitle": "Varto, Hınıs, Muş ve çevre ilçelerde hizmet veriyoruz.",
+    "subtitle": "Varto, Karlıova, Hınıs, Muş ve çevre ilçelerde 7/24 hizmet veriyoruz.",
     "callout": "Listede yer almayan bir noktada olsanız da arayabilirsiniz."
   },
   "about": {
@@ -83,7 +83,7 @@
     "items": {
       "local": {
         "title": "Yerel Ekip",
-        "description": "Varto ve çevresinde faaliyet gösteriyoruz."
+        "description": "Varto ve Karlıova başta olmak üzere bölgenin tamamında faaliyet gösteriyoruz."
       },
       "fast": {
         "title": "Hızlı",

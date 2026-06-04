@@ -51,10 +51,11 @@ export const business = {
   },
   serviceAreas: [
     "Varto",
+    "Karlıova",
     "Hınıs",
     "Muş Merkez",
     "Bulanık",
-    "Karlıova",
+    "Varto-Karlıova Karayolu",
     "Erzurum-Muş D300 Karayolu",
     "Varto-Hınıs Karayolu",
   ],
