@@ -16,7 +16,8 @@ export function Footer() {
 
   return (
     <footer className="relative border-t border-ink-800/70 bg-ink-950">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      {/* pb-28 lg:pb-16: FloatingCTA bar mobilde footer'ı kapatıyor — ek padding ile credit ve copyright görünür kalsın */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-28 sm:pt-16 lg:pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2">
             <Logo variant="lockup" />

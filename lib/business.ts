@@ -26,7 +26,7 @@ export const business = {
       en: "Hello, I need roadside assistance.",
     },
   },
-  email: "vartocekici@gmail.com",
+  email: "cekicivarto@gmail.com",
   address: {
     streetAddress: "Erzurum Caddesi",
     locality: "Varto",
@@ -71,6 +71,15 @@ export const business = {
 export const developer = {
   name: "Varto Yazılım",
   url: "https://vartoyazilim.com",
+} as const;
+
+/**
+ * 3rd-party analytics IDs. Set to empty string to disable.
+ * Vercel Analytics + Speed Insights are wired separately in the layout.
+ */
+export const analytics = {
+  /** Google Analytics 4 measurement ID (G-XXXXXXXXXX). */
+  googleAnalyticsId: "G-RTZBBQ7ZYP",
 } as const;
 
 // Gallery images are now auto-detected from `public/galeri/` by `lib/gallery.ts`.

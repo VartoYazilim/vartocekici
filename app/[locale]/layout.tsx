@@ -4,10 +4,11 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { Inter, Inter_Tight, Anton, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { routing } from "@/i18n/routing";
-import { SITE_URL, business } from "@/lib/business";
+import { SITE_URL, analytics, business } from "@/lib/business";
 import { JsonLd } from "@/components/JsonLd";
 import "../globals.css";
 
@@ -141,6 +142,9 @@ export default async function LocaleLayout({
         <JsonLd locale={locale as "tr" | "en"} />
         <Analytics />
         <SpeedInsights />
+        {analytics.googleAnalyticsId && (
+          <GoogleAnalytics gaId={analytics.googleAnalyticsId} />
+        )}
       </body>
     </html>
   );
