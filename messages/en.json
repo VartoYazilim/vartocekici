@@ -62,6 +62,10 @@
     "title": "From the Field",
     "subtitle": "Photos from our field operations.",
     "note": "Placeholder images. Real vehicle photos will be added soon.",
+    "prev": "Previous",
+    "next": "Next",
+    "open": "Enlarge",
+    "close": "Close",
     "items": [
       "Intercity Towing · Highway",
       "Post-Accident Recovery · SUV",

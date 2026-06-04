@@ -14,7 +14,7 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-36"
+      className="relative isolate flex min-h-svh items-center overflow-hidden pt-24 pb-16"
     >
       {/* Background photo slideshow (crossfade) */}
       <HeroBackground images={heroBackgroundSrcs} alt={bgAlt} />
@@ -47,7 +47,7 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
         aria-hidden="true"
       />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-ink-50 [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]">
             {t("title")}

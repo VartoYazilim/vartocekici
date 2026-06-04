@@ -62,6 +62,10 @@
     "title": "Sahadan",
     "subtitle": "Saha çalışmalarımızdan fotoğraflar.",
     "note": "Demo görseller. Gerçek araç fotoğrafları yakında eklenecek.",
+    "prev": "Önceki",
+    "next": "Sonraki",
+    "open": "Büyüt",
+    "close": "Kapat",
     "items": [
       "Şehir Dışı Çekme · Karayolu",
       "Kaza Sonrası Kurtarma · SUV",

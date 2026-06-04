@@ -139,6 +139,15 @@
   }
 }
 
+/* Hide scrollbar but keep scroll functionality (gallery carousel) */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Subtle background grid for hero — purely decorative */
 .bg-grid {
   background-image:
