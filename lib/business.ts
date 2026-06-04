@@ -10,6 +10,8 @@ export const SITE_URL = (
 export const business = {
   name: "Varto Çekici",
   legalName: "Varto Çekici Oto Kurtarma",
+  // İşletmenin sahada/araçlarda kullandığı alternatif adı — JSON-LD alternateName.
+  alternateName: "Can Yol Yardım",
   tagline: {
     tr: "7/24 Yol Yardım ve Oto Kurtarma",
     en: "24/7 Roadside Assistance & Towing",

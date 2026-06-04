@@ -40,6 +40,7 @@ export function JsonLd({ locale }: { locale: "tr" | "en" }) {
         "@type": "AutomotiveBusiness",
         "@id": `${SITE_URL}/#business`,
         name: business.name,
+        alternateName: business.alternateName,
         legalName: business.legalName,
         url,
         description,
