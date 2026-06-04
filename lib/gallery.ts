@@ -50,3 +50,12 @@ export const galleryImages: GalleryImage[] = sources.map((src) => ({
 }));
 
 export const isUsingPlaceholders = usingPlaceholders;
+
+/**
+ * Image sources for the hero background slideshow.
+ * Uses up to the first 4 gallery images (kept small for bandwidth/LCP).
+ * Add/remove photos in public/galeri/ and this updates automatically.
+ */
+export const heroBackgroundSrcs: string[] = galleryImages
+  .slice(0, 4)
+  .map((img) => img.src);

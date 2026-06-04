@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Phone, MessageCircle } from "lucide-react";
 import { business, telHref, whatsappHref } from "@/lib/business";
+import { heroBackgroundSrcs } from "@/lib/gallery";
+import { HeroBackground } from "./HeroBackground";
 
 export function Hero({ locale }: { locale: "tr" | "en" }) {
   const t = useTranslations("hero");
@@ -15,15 +16,8 @@ export function Hero({ locale }: { locale: "tr" | "en" }) {
       id="top"
       className="relative isolate overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-36"
     >
-      {/* Background photo */}
-      <Image
-        src="/galeri/01-karayolu-otomobil.jpg"
-        alt={bgAlt}
-        fill
-        priority
-        sizes="100vw"
-        className="absolute inset-0 -z-30 object-cover object-center"
-      />
+      {/* Background photo slideshow (crossfade) */}
+      <HeroBackground images={heroBackgroundSrcs} alt={bgAlt} />
       {/* Dark overlays — guarantee text legibility over the photo.
           Left→right (text side darker) + bottom→top (anchor copy) + flat base. */}
       <div
